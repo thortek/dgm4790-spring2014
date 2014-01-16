@@ -1,0 +1,1 @@
+// This is my bar.js file for the thor-branch
