@@ -1,6 +1,7 @@
-//This is where I would put my javascript code
+//This is where I would put my javascript cod
 
 // This is a comment that belongs only in my develop branch
+<<<<<<< HEAD
 
             |    |              _.-7
             |\.-.|             ( ,(_
@@ -29,3 +30,5 @@
  snd  /'  |  /  '-._\      ''\
           `-'
 
+=======
+>>>>>>> 2806dea6627e6f5549c54c84c28464e28c825d69
