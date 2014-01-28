@@ -1,0 +1,69 @@
+As the Dean…
+
+(4) XL- 1.	I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
+	A) So the department events would be made into a list in order to see all the events.
+	B) We will have to develop a list view of all the events.(2
+(2) 2.	 I want to be able to add my input about the importance of events that have been submitted to me.
+(4) 3.	 I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
+(2) 4.	 I want to be able to filter my views by department.
+(3) 5.	I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.
+(1) XL - 6.	I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
+	(1) A) If it is a mobile app, we will have to access the phone’s notifications.
+	(1) B) If it is a web app, notifications can be displayed with a number by the events. Telling the dean that there is a new event.
+(4) 7.	I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
+(1) XL - 8.	 I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+	(1) A) If it is a mobile app, we will have to access the phone’s notifications.
+	(1) B) If it is a web app, notifications can be displayed with a number by the events.  
+(2) 9.	i want to be able to add my own scale of importance to different projects/events according to how i see them.
+(1) XL - 10.	I would like to be able to add a project/event to my calendar.
+	(1) A) If it is a mobile app, we will have to have the app speak with the calendar on the phone.
+(1) 11.	I want to see my app run on the web. - Ryan Martin
+(2) 12.	I want to put my own input into the app.
+(5) XL - 13.	I want to access the app from anywhere including different devices (Desktop, tablets, or phone).
+	(5) A) If it is a web app, they should have access everywhere.
+	(5) B) If it is a mobile app, we will have to develop for multiple devices.
+(5) 14.	 The app has to be user friendly and easy to use.
+(3) 15.	 I want to be able to remove projects/events or have them auto-remove once the event date has expired.
+(5) 16.	 I would like to receive e-mail reminders when a new project/event has been submitted.
+(4) 17.	 I would like the radar app to export iCal invites so I can add them to my calendar. 
+(2) 18.	I want an easy way to determine which event/project is deemed most important by me, and be able to categorize it that way.
+(1) 19.	I would like to be able to see the events/projects in a list ordered by Importance, set by me, Date submitted, Date of event, 
+(5) 20.	I would like to be able to add event/project dates directly to my calendar from the app.
+(5) 21.	I would like to input feedback about items that are both private, for my eyes only, and that can be seen by the Chair Head that submitted it.
+(5) 22.	I want to quickly see how soon appointments are and how important they are compared to others so that I can set my schedule accordingly.
+(3) 23.	I want an app that visually shows me when my appointments are to quickly assess those that need my attention now.
+(2) 24.	I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+(1) 25.	I want to be able to see more information about each event so that I can access my own interest level
+(1) 26.	 I want to be able delete events that I don't deem important so that I don’t have a lot of clutter on my screen
+
+
+As a Department Chair…
+
+(5) 1.	I want to know that the Dean has seen my important event/project.
+(1) 2.	 I want to be able to rank my events. - Ryan Martin
+(1) 3.	I want to be able to select a date/rank the importance/add a brief description of the event, so that the Dean knows precisely what the event is about.
+(5) XL - 4.	I want to see what’s on the Dean’s radar
+	(5) A) I don’t believe chairs should be what is on the Dean’s radar because that is private.
+(4) 5.	I want to see which event is taking the most priority and comes from which department.
+(3) F 6.	I can specify which event takes the most priority in my department.
+(5) XL - 7.	The app has to have different views - Ryan Martin
+	(5) A) A list view would need to be created.
+	(5) B) A radar view would need to be created.
+	(5) C) A box view (like Facebook) would need to be created.
+(3) 8.	I want to weekly to be able to add attachments to my project to better describe projects/events.
+(2) F 9.	I want all of my projects/events to be seen as the most important.
+(3) F 10.	I would like to receive e-mail when the dean has commented on my project/event.
+(4) 11.	I want to be able to specify which department I'm submitting the event/project from.
+(3) F 12.	I would like to add additional departments that I may be collaborating with in regards to events/projects.
+(5) F 13.	I want to set a date for when a project will be completed, so the Dean will know there is a deadline.
+(2) F 14.	I want to know if there are any conflicts with other departments dates/times, so I might be able to change mine.
+(4) F 15.	I want to know what ranking the Dean gave my event/project.
+(5) 16.	I want to be able to delete/cancel projects I have already submitted.
+(3) F 17.	I need a way to input the appointments from my cell or website so that I am not restricted to what device I may or may not have available at the moment.
+(5) F 18.	I want a way to let the Dean know when my appointments with him are and how vital to him they are so that he is aware of items that require his input.
+
+
+
+
+
+
