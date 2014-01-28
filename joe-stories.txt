@@ -7,17 +7,17 @@ Priorities listed as (1) - (5) next to number of user story.
 As the Dean…
 
 (1)*1.	I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
-	a.	I want events to be organized by date and importance so that I can easily see what events are coming up.
+JOE	a.	I want events to be organized by date and importance so that I can easily see what events are coming up.
 	b.	I want the ability to filter events by date and importance so that my radar shows only the events I want it to show.
 	c.	I want my department chairs to have the ability to add events to my radar so that I know what's going on in their department.
 	d.	I want the ability to view information as a radar or as a list so that I have different options for how I view upcoming events.
 (2)3.	I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
-(2)4.	I want to be able to filter my views by department.
+JOE(2)4.	I want to be able to filter my views by department.
 (1)5.	I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.
 (2)*6.	I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
 	a.	I want the ability to add events to the calendar on my phone so that I can see if events conflict with other scheduled items.
 	b.	I want an "add event to calendar" button on each event so that I can specifically add events to my calendar.
-(1)7.	I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
+JOE(1)7.	I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
 (4)*8.	I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
 	a.	I want to receive a push notification immediately when a new event is added that will link me to the event so I can see the details.
 	b.	I want to be able to see a list of new events that I have not yet viewed so that I don't miss anything important.
