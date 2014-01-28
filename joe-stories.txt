@@ -1,0 +1,50 @@
+Joe Hafen - Adding and Prioritizing User Stories
+
+* = XL and larger - These have been broken into smaller stories.
+Priorities listed as (1) - (5) next to number of user story.
+"Failed" stories have been removed.
+
+As the Dean…
+
+(1)*1.	I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
+	a.	I want events to be organized by date and importance so that I can easily see what events are coming up.
+	b.	I want the ability to filter events by date and importance so that my radar shows only the events I want it to show.
+	c.	I want my department chairs to have the ability to add events to my radar so that I know what's going on in their department.
+	d.	I want the ability to view information as a radar or as a list so that I have different options for how I view upcoming events.
+(2)3.	I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
+(2)4.	I want to be able to filter my views by department.
+(1)5.	I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.
+(2)*6.	I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
+	a.	I want the ability to add events to the calendar on my phone so that I can see if events conflict with other scheduled items.
+	b.	I want an "add event to calendar" button on each event so that I can specifically add events to my calendar.
+(1)7.	I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
+(4)*8.	I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+	a.	I want to receive a push notification immediately when a new event is added that will link me to the event so I can see the details.
+	b.	I want to be able to see a list of new events that I have not yet viewed so that I don't miss anything important.
+(1)*10.	I would like to be able to add a project/event to my calendar.
+	a.	I want the ability to select a priority and a date for the events I add to my radar, so I can see my own events and not just those that others have added.
+	b.	I want the events that I add to be in their own color or use a special icon so that I know they wer added by me.
+(5)*13.	I want to access the app from anywhere including different devices (Desktop, tablets, or phone).
+	a.	I want the ability to log into a web interface to add events so that I can type information on a keyboard rather than using the touch screen to type.
+	b.	I want the ability to log in with a username and password so that I can access the information from any device.
+(1)15.	I want to be able to remove projects/events or have them auto-remove once the event date has expired.
+(1)19.	I would like to be able to see the events/projects in a list ordered by Importance, set by me, Date submitted, Date of event, 
+(3)21.	I would like to input feedback about items that are both private, for my eyes only, and that can be seen by the Chair Head that submitted it.
+(2)22.	I want to quickly see how soon appointments are and how important they are compared to others so that I can set my schedule accordingly.
+(2)24.	I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+
+As a Department Chair…
+
+(4)1.	I want to know that the Dean has seen my important event/project.
+(2)2.	I want to be able to rank my events.
+(1)3.	I want to be able to select a date/rank the importance/add a brief description of the event, so that the Dean knows precisely what the event is about.
+(3)*4.	I want to see what’s on the Dean’s radar
+	a.	I want events to be listed by priority and department so that I can see what events are most important.
+	b.	I want the app to tell me if the event I'm adding is conflicting with something already on the Dean's radar so that I know if I need to schedule it at a different time.
+(3)5.	I want to see which event is taking the most priority and comes from which department.
+(1)*7.	The app has to have different views
+	a.	I want to be able to select between radar and list view so that I can visualize the data in different ways.
+	b.	I want to have a menu bar at the top where I can switch between different views so that it is easy to navigate.
+(4)8.	I want to weekly to be able to add attachments to my project to better describe projects/events.
+(1)11.	I want to be able to specify which department I'm submitting the event/project from.
+(1)16.	I want to be able to delete/cancel projects I have already submitted.
