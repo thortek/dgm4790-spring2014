@@ -1,0 +1,67 @@
+Dean's Radar App:  User Stories Prioritized
+
+Todd Goates
+
+Each user story previously created was prioritized from 1-5, with 1 being the most important and 5 being the least important.  User stories with an * have been modified into smaller sub-tasks.  I have listed my name next to tasks that I would like to work on.
+
+**************
+ AS A DEAN... 
+**************
+
+PRIORITY 1
+* 1.  I want an Android app on my phone that lets me see upcoming events that each of the department chairs submits ranked by date and their level of importance.
+
+7.  I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.  - Todd
+
+PRIORITY 2
+5.  I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.  - Todd
+
+* 8.  I want to receive a notification when I first open up the app that alerts me about the newest events added by the department chairs so that I don't miss any.
+
+15.	 I want to be able to remove projects/events or have them auto-remove once the event date has expired.
+
+19.	 I would like to be able to see the events/projects in a list ordered by Importance, set by me, Date submitted, Date of event, 
+
+PRIORITY 3
+3.	 I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
+
+4.	 I want to be able to filter my views by department.
+
+21.	 I would like to input feedback about items that are both private, for my eyes only, and that can be seen by the Chair Head that submitted it.
+
+PRIORITY 4
+* 6.  I want to be able to send an email to myself about the important events that I want to go to that include the information about when/where I need to go.  All the text from the event will be automatically included in the email to myself.  All I have to do is tap on a button to send it to myself.  - Todd
+
+* 10.  I would like the app to be able to automatically send an email to myself with the date, time, location, and description of the event, so that I can use my phone's email app to add it to my calendar.
+
+24.	 I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+
+PRIORITY 5
+* 13.  I want the app to be cross platform, meaning that it works on my Android phone, but also on my tablet, so that I can access the same information on different devices.
+
+**************************
+ AS A DEPARTMENT CHAIR...
+**************************
+
+PRIORITY 1
+2.  I want to be able to rank my events.  - Todd
+
+3.  I want to be able to select a date/rank the importance/add a brief description of the event, so that the Dean knows precisely what the event is about.  - Todd
+
+11.  I want to be able to specify which department I'm submitting the event/project from.
+
+PRIORITY 2
+8.  I want to weekly to be able to add attachments to my project to better describe projects/events.
+
+16.  I want to be able to delete/cancel projects I have already submitted.
+
+PRIORITY 3
+1.  I want to know that the Dean has seen my important event/project.
+
+PRIORITY 4
+* 4.  I want to have a Dean's view option that shows what date and time slots have already been requested by other department chairs, that way I will know if my event is in conflict with another chair's event.
+
+5.  I want to see which event is taking the most priority and comes from which department.
+
+PRIORITY 5
+* 7.  I want the app to have a list view that shows the different events listed vertically with the upcoming events listed at the top.
