@@ -1,0 +1,33 @@
+I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week. 
+
+Input
+     User ID
+     Dean touches a tab of his choice (Date range filter)
+     Today's date sent to database
+
+Output
+     View changes to match his choice
+     Events are shown for that date range
+          Yearly/Quarterly/"Semesterly"
+          Monthly events
+          Weekly events
+          Today's events
+     
+
+Event
+     No Internet Connection
+     No events to pull
+     Could not connect to database
+
+
+
+
+Input
+     Clicks button to send error log
+     Error log is sent to developers
+
+
+
+Notes:
+     Do we want to have custom date filters? 
+     Within each "view" (visual radar/list/event boxes, etc), they can filter by date range
