@@ -1,0 +1,126 @@
+/**************************** Priorities ****************************/
+As the Dean…
+
+Priority 1:
+1.  I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
+Priority 2:
+22.  I want to quickly see how soon appointments are and how important they are compared to others so that I can set my schedule accordingly.
+24.  I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+25.  I want to be able to see more information about each event so that I can access my own interest level
+Priority 3:
+7.  I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
+13.  I want to access the app from anywhere including different devices (Desktop, tablets, or phone).
+19.  I would like to be able to see the events/projects in a list ordered by Importance, set by me, Date submitted, Date of event, 
+Priority 4:
+3.   I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
+4.   I want to be able to filter my views by department.
+6.  I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
+8.   I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+10.  I would like to be able to add a project/event to my calendar.
+15.   I want to be able to remove projects/events or have them auto-remove once the event date has expired.
+Priority 5:
+5.  I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.
+21.  I would like to input feedback about items that are both private, for my eyes only, and that can be seen by the Chair Head that submitted it.
+
+
+Priority Fail:
+2.   I want to be able to add my input about the importance of events that have been submitted to me.
+9.  i want to be able to add my own scale of importance to different projects/events according to how i see them.
+11.  I want to see my app run on the web.
+12.  I want to put my own input into the app.
+14.   The app has to be user friendly and easy to use.
+16.   I would like to receive e-mail reminders when a new project/event has been submitted.
+17.   I would like the radar app to export iCal invites so I can add them to my calendar. 
+18.  I want an easy way to determine which event/project is deemed most important by me, and be able to categorize it that way.
+20.  I would like to be able to add event/project dates directly to my calendar from the app.
+23.  I want an app that visually shows me when my appointments are to quickly assess those that need my attention now.
+26.   I want to be able delete events that I don't deem important so that I don’t have a lot of clutter on my screen
+
+
+
+
+As a Department Chair…
+
+Priority 1:
+[none]
+Priority 2:
+3.  I want to be able to select a date/rank the importance/add a brief description of the event, so that the Dean knows precisely what the event is about.
+8.  I want to weekly to be able to add attachments to my project to better describe projects/events.
+Priority 3:
+1.  I want to know that the Dean has seen my important event/project.
+16.  I want to be able to delete/cancel projects I have already submitted.
+Priority 4:
+2.   I want to be able to rank my events.
+7.  The app has to have different views
+Priority 5:
+5.  I want to see which event is taking the most priority and comes from which department.
+11.  I want to be able to specify which department I'm submitting the event/project from.
+
+
+Priority Fail:
+4.  I want to see what’s on the Dean’s radar
+6.  I can specify which event takes the most priority in my department.
+9.  I want all of my projects/events to be seen as the most important.
+10.  I would like to receive e-mail when the dean has commented on my project/event.
+12.  I would like to add additional departments that I may be collaborating with in regards to events/projects.
+13.  I want to set a date for when a project will be completed, so the Dean will know there is a deadline.
+14.  I want to know if there are any conflicts with other departments dates/times, so I might be able to change mine.
+15.  I want to know what ranking the Dean gave my event/project.
+17.  I need a way to input the appointments from my cell or website so that I am not restricted to what device I may or may not have available at the moment.
+18.  I want a way to let the Dean know when my appointments with him are and how vital to him they are so that he is aware of items that require his input.
+
+
+
+/****************************** Details ****************************/
+Dean:/******************************
+1 - I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
+- (Will this be a web app or EXE type app?)
+- visually represent upcoming events (radar, calendar, list, etc, see chair #7)
+- store events in a database
+- access events on my device (android)
+- allow those without the app to add events through a website or similar
+- Ability to edit events from app
+
+6 - I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
+- flag certain events to be notifications
+- options to be calendar events or alarm events
+- access to device calendar and alarm events
+
+8 - I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+- detect when an event was added
+- send notification to the device:
+http://developer.android.com/training/notify-user/build-notification.html
+http://developer.android.com/guide/topics/ui/notifiers/notifications.html
+http://www.vogella.com/tutorials/AndroidNotifications/article.html
+
+10 - I would like to be able to add a project/event to my calendar.
+- GUI to add/edit events
+- access to device's calendar:
+http://stackoverflow.com/questions/3721963/how-to-add-calendar-events-in-android/4336183#4336183
+http://developer.android.com/guide/topics/providers/calendar-provider.html
+http://stackoverflow.com/questions/6094243/android-create-calendar-event
+
+13 - I want to access the app from anywhere including different devices (Desktop, tablets, or phone).
+- make a web-app version of the app so that it can be run on various platforms. OS independent
+
+
+Chair:/******************************
+4 - I want to see what’s on the Dean’s radar (So I can schedule my events more strategically)
+- we only need to show when the events are not who and where it is with
+- need access to the database
+- display on another device other than the one the dean has
+- remote access separate from the app
+
+7 - The app has to have different views
+- Graphical "Radar Sweep" view - Distance from center means importance, distance from sweep arm indicates how soon the event is, angle from center can be department, size should not be significant and all icons will be equally easy to click
+- Calendar view - Displays the events on the device's calendar
+- List view - Displays all the events in a list with the ability to sort by date, relevance, etc
+
+
+
+/**************************** Call Dibs ****************************/
+Dean-8 - I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+Dean-10 - I would like to be able to add a project/event to my calendar.
+Dean-24.  I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+
+
