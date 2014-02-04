@@ -1,3 +1,9 @@
+As a Department Chair,
+ I want to be able to select a date/rank the importance/add a brief description of the event, 
+ so that the Dean knows precisely what the event is about.
+ 
+ 
+ 
 Inputs:
 date,
 rank importance,
