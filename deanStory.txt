@@ -1,0 +1,21 @@
+Inputs:
+date,
+rank importance,
+description,
+title,
+department,
+time,
+location,
+ID,
+Name,
+PhoneNumber,
+email,
+sizeofEvent
+
+Output:
+success token
+
+Events:
+send is successful,
+invalid form entry,
+couldn't connect to server
