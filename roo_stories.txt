@@ -1,0 +1,48 @@
+As the Dean…
+
+[2] XL 1.	I want a mobile app so that I can see/view projects/events occurring in all 9 of the departments in T&C.
+[2]	a. Some events are marked as private, some as public. As the Dean, I have access to all of them when I am logged in.
+ROO [2]	b. He can toggle between the different views (list, boxes, etc.) that he can scroll down since they all won't fit on a phone's screen. 
+ROO [5] 3.	 I want to be able to "zoom" in and out from daily, to weekly to monthly views to see everything headed my way at once, or just the most important items that day/week.
+ROO [3] 4.	 I want to be able to filter my views by department.
+[4] 5.	I want editing/admin rights to edit the importance of events/remove events so that I can make necessary corrections to over-zealous/spamming Chairs.
+[2] XL 6.	I want to be able to set reminders/notifications for events that I choose, so that my phone will remind me when/where I need to go.
+[2]	a. If it's a native/hybrid app, the code will access the phone's notification bar and task/calendar api
+[2]	b. If it's a web app, it will show notifications once the Dean logs in (something visual like a red number, bell or flag) for upcmoing events he signed up for. 
+ROO [5] 7.	I want to be able to click/tap on a single event on the radar so that I can get a more detailed description of the event.
+[2] XL 8.	 I want to receive a notification on my phone whenever a new event is added to the radar, so I can always know about upcoming events as soon as possible.
+[2]	a. If it's a native/hybrid app, the code will access the phone's notification bar api
+[2]	b. If it's a web app, it will show notifications once the Dean logs in. 
+[2] XL 10.	I would like to be able to add a project/event to my calendar.
+[2]	a. If it's a native/hybrid app, the code will access the phone's calendar api
+[2]	b. If it's a web app, it could copy the event information so the Dean can paste it into his favorite calendar.
+[2]	c. He can subscribe to a new URL that has the events on it. 
+[4] XL 13.	I want to access the app from anywhere including different devices (Desktop, tablets, or phone).
+[4]	a. If it's a native/hybrid app, the code will access the device's apis
+[4]	b. Is it's a web app, it will need to be responsive
+[2] 15.	 I want to be able to remove projects/events or have them auto-remove once the event date has expired.
+ROO [1] 19.	I would like to be able to see the events/projects in a list ordered by Importance, set by me, Date submitted, Date of event, 
+[5] 21.	I would like to input feedback about items that are both private, for my eyes only, and that can be seen by the Chair Head that submitted it.
+[2] 22.	I want to quickly see how soon appointments are and how important they are compared to others so that I can set my schedule accordingly.
+ROO [4] 24.	I would like a contact function, either phone or email, to easily respond to those setting my appointments in case I need to contact them about the appointment.
+
+
+As a Department Chair…
+
+[4] 1.	I want to know that the Dean has seen my important event/project.
+ROO [2] 2.	 I want to be able to rank my events.
+ROO [2] 3.	I want to be able to select a date/rank the importance/add a brief description of the event, so that the Dean knows precisely what the event is about.
+[3] XL 4.	I want to see what’s on the Dean’s radar
+[5]	a. There should be a place where I can see all the past events I have submitted
+[5]	b. There could be a way to see all the events the other departments have submitted/ the Dean is attending
+[5]	c. Some events are public, some are private. A dept. chair can only see the public events.
+[2] 5.	I want to see which event is taking the most priority and comes from which department.
+[3] XL 7.	The app has to have different views
+[3]	a. The data should easily be shown in different ways, such as a list, event boxes, a visual "radar"
+[3]	b. The different views could be toggled with tabs the user can choose.
+[3]	c. The user can choose which view is the default. We will store thier choice in the data. 
+[5] 8.	I want to weekly to be able to add attachments to my project to better describe projects/events.
+[4] 11.	I want to be able to specify which department I'm submitting the event/project from.
+ROO [3] 16.	I want to be able to delete/cancel projects I have already submitted.
+
+
