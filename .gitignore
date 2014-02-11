@@ -1,6 +1,6 @@
-# OS generated files #
-######################
+logs/*
+!.gitkeep
+node_modules/
+tmp
 .DS_Store
-.DS_Store?
-
-.idea/
+.idea
