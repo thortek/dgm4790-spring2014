@@ -1,6 +1,14 @@
 angular.module('starter.controllers', [])
 
 
+
+// Login Controller
+.controller('LoginCtrl', function($scope, loginService) {
+  // "Login" is a service returning mock data (services.js)
+  
+})
+
+
 // A simple controller that fetches a list of data from a service
 .controller('PetIndexCtrl', function($scope, PetService) {
   // "Pets" is a service returning mock data (services.js)

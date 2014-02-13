@@ -23,4 +23,8 @@ angular.module('starter.services', [])
       return pets[petId];
     }
   }
+})
+
+.factory('loginService', function() {
+  
 });
