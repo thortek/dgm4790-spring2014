@@ -15,6 +15,11 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+    // setup a login state
+    .state('login', {
+      url: "/login",
+      templateUrl: "templates/login.html"
+    })
 
     // setup an abstract state for the tabs directive
     .state('tab', {
@@ -63,7 +68,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('login');
 
 });
 
