@@ -3,9 +3,15 @@ angular.module('starter.controllers', [])
 
 
 // Login Controller
-.controller('LoginCtrl', function($scope, loginService) {
+.controller('loginCtrl', function($scope, loginService) {
   // "Login" is a service returning mock data (services.js)
-  
+  console.log('LoginCtrl fired');
+})
+
+// Login Controller
+.controller('registerCtrl', function($scope, loginService) {
+  // "Login" is a service returning mock data (services.js)
+  console.log('Regster fired');
 })
 
 

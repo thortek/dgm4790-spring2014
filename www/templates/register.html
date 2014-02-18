@@ -3,36 +3,33 @@
   It was wired up in the app config (app.js) 
   The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
 -->
-<view title="'Login'">
+<view title="'Select Department'">
   <content has-header="true" has-tabs="true">
-    
-    <!-- Card -->
-    <div class="card">
-      <div class="item item-text-wrap">
-        <h1>Dean Radar</h1>
-        <p>Please login below to get started.</p>
-      </div>
-    </div>
     
     <!-- Login Block -->
     <div class="list list-inset">
+      <label for="" class="item item-input">
+        <input type="text" placeholder="First Name">
+      </label>
+      
+      <label for="" class="item item-input">
+        <input type="text" placeholder="Last Name">
+      </label>
+      
       <label class="item item-input">
         <input type="text" placeholder="Email">
       </label>
       <label class="item item-input">
         <input type="password" placeholder="Password">
       </label>
-      <button class="button button-block button-royal">
-        Login
-      </button>
+      
+      <div class="button-bar">
+        <a class="button button-block button-royal" href="#/tab/register/1">
+          Next
+        </a>
+      </div>
+
     </div>
-    <p>Need an account? <a href="#/register">Sign up</a>.</p>
-
+  
   </content>
-  
-  
-
-  <div class="bar bar-footer bar-dark">
-    <div class="title">Please Login</div>
-  </div>
 </view>

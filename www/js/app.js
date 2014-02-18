@@ -16,59 +16,112 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
   // Each state's controller can be found in controllers.js
   $stateProvider
     // setup a login state
-    .state('login', {
-      url: "/login",
-      templateUrl: "templates/login.html"
-    })
-
-    // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "templates/tabs.html",
+      controller: 'loginCtrl'
     })
 
-    // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.login', {
+      url: "/login",
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'login-tab': {
+          templateUrl: 'templates/login.html',
+          controller: 'loginCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.register', {
+      url: '/register',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'register-tab': {
+          templateUrl: 'templates/register.html',
+          controller: 'registerCtrl'
         }
       }
     })
 
-    .state('tab.adopt', {
-      url: '/adopt',
+    .state('tab.register-details', {
+      url: '/register/1',
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'register-tab': {
+          templateUrl: 'templates/register.1.html',
+          controller: 'registerCtrl'
         }
       }
     })
 
-    .state('tab.about', {
-      url: '/about',
+    .state('tab.register-confirm', {
+      url: '/register/2',
       views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
+        'register-tab': {
+          templateUrl: 'templates/register.2.html',
+          controller: 'registerCtrl'
         }
       }
-    });
+    })
+
+    // .state('register.1', {
+    //   url: "/1",
+    //   views: {
+    //     'register': {
+    //       templateUrl: '/templates/register.1.html',
+    //       controller: 'registerCtrl'
+    //     }
+    //   }
+    // })
+
+    // // setup an abstract state for the tabs directive
+    // .state('tab', {
+    //   url: "/tab",
+    //   abstract: true,
+    //   templateUrl: "templates/tabs.html"
+    // })
+
+    // // the pet tab has its own child nav-view and history
+    // .state('tab.pet-index', {
+    //   url: '/pets',
+    //   views: {
+    //     'pets-tab': {
+    //       templateUrl: 'templates/pet-index.html',
+    //       controller: 'PetIndexCtrl'
+    //     }
+    //   }
+    // })
+
+    // .state('tab.pet-detail', {
+    //   url: '/pet/:petId',
+    //   views: {
+    //     'pets-tab': {
+    //       templateUrl: 'templates/pet-detail.html',
+    //       controller: 'PetDetailCtrl'
+    //     }
+    //   }
+    // })
+
+    // .state('tab.adopt', {
+    //   url: '/adopt',
+    //   views: {
+    //     'adopt-tab': {
+    //       templateUrl: 'templates/adopt.html'
+    //     }
+    //   }
+    // })
+
+    // .state('tab.about', {
+    //   url: '/about',
+    //   views: {
+    //     'about-tab': {
+    //       templateUrl: 'templates/about.html'
+    //     }
+    //   }
+    // })
+  ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('login');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });
 
