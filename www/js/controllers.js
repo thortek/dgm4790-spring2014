@@ -32,4 +32,5 @@ angular.module('starter.controllers', [])
 .controller('tempDataCtrl', function($scope, tempDataService) {
     // "GetData" is a service returning mock data (services.js)
     $scope.tempData = tempDataService.GetData();
+    $scope.myClass = "grey"
 });
