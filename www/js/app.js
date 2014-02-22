@@ -47,7 +47,8 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
       })
       .state('user.home', {
         url: '/',
-        templateUrl: '/templates/dean-home.html'
+        templateUrl: 'templates/dean-home.html',
+        controller:'tempDataCtrl'
       })
     ;
 

@@ -26,4 +26,10 @@ angular.module('starter.controllers', [])
 .controller('PetDetailCtrl', function($scope, $stateParams, PetService) {
   // "Pets" is a service returning mock data (services.js)
   $scope.pet = PetService.get($stateParams.petId);
+})
+
+// A simple controller that fetches a temporaryData from a service
+.controller('tempDataCtrl', function($scope, tempDataService) {
+    // "GetData" is a service returning mock data (services.js)
+    $scope.tempData = tempDataService.GetData();
 });
