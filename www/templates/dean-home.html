@@ -1,0 +1,75 @@
+
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<view title="'Hello Mr Dean'">
+  <content has-header="true" padding="true">
+    <p></p>
+    <p>Hello world?</p>
+
+      <div ng-model="tempData" ng-repeat="event in events">
+          <p>ID:{{ events.id }}</p>
+          <p>Department: {{ events.department }}</p>
+          <p>Chair Name: {{ events.chairName }}</p>
+          <p>Event Name: {{ events.eventName }}</p>
+          <p>Start Date: {{ events.StartDate }}</p>
+          <p>End Date: {{ events.endDate }}</p>
+          <p>Date Submitted: {{ events.dateSubmitted }}</p>
+          <p>Location: </p>
+          <p>Building: {{ events.location.building }}</p>
+          <p>Street: {{ events.location.street }}</p>
+          <p>City: {{ events.location.city }}</p>
+          <p>Other: {{ events.location.other }}</p>
+          <p>URL: {{ events.url }}</p>
+          <p>Description: {{ events.description }}</p>
+          <p>Notes: {{ events.notes }}</p>
+
+
+      </div>
+
+
+
+
+
+
+  </content>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+  Leaving code below for now, helpful when determining how to load things into a named view.
+
+  <tabs tabs-style="tabs-icon-top" tabs-type="tabs-default"> -->
+
+
+  <!-- Pets Tab -->
+<!--   <tab title="Home" icon="icon ion-home" href="#/tab/pets">
+    <nav-view name="login-tab"></nav-view>
+  </tab>
+ -->
+
+  <!-- Adopt Tab -->
+  <!-- <tab title="Register" icon="icon ion-ios7-bookmarks" href="#/tab/register">
+    <nav-view name="register-tab"></nav-view>
+  </tab>
+ -->
+
+  <!-- About Tab -->
+  <!-- <tab title="Add Radar Item" icon="icon ion-compose" href="#/tab/about">
+    <nav-view name="about-tab"></nav-view>
+  </tab> -->
+
+
+<!-- </tabs>
+ -->
