@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
       .state('user.home', {
         url: '/',
         templateUrl: 'templates/dean-home.html',
-        controller:'tempDataCtrl'
+        controller:'userCtrl'
       })
     ;
 
@@ -56,7 +56,7 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
   $urlRouterProvider.otherwise('/login/');
 
   // FIX for trailing slashes. Gracefully "borrowed" from https://github.com/angular-ui/ui-router/issues/50
-    $urlRouterProvider.rule(function($injector, $location) {
+  $urlRouterProvider.rule(function($injector, $location) {
         if($location.protocol() === 'file')
             return;
 
@@ -84,26 +84,27 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         return path + '/?' + params.join('&');
     });
 
-})
+});
 
 //Run this off the bat to determine state and act accordingly
-.run(['$rootScope', '$state', 'Auth', function ($rootScope, $state, Auth) {
+// .run(['$rootScope', '$state', 'Auth', function ($rootScope, $state, Auth) {
 
-    $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
-        if (!Auth.authorize(toState.data.access)) {
-            $rootScope.error = "Seems like you tried accessing a route you don't have access to...";
-            event.preventDefault();
+//     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
+//         if (!Auth.authorize(toState.data.access)) {
+//             $rootScope.error = "Seems like you tried accessing a route you don't have access to...";
+//             event.preventDefault();
             
-            if(fromState.url === '^') {
-                if(Auth.isLoggedIn())
-                    $state.go('user.home');
-                else {
-                    $rootScope.error = null;
-                    $state.go('anon.login');
-                }
-            }
-        }
-    });
+//             if(fromState.url === '^') {
+//                 if(Auth.isLoggedIn())
+//                     $state.go('user.home');
+//                 else {
+//                     $rootScope.error = null;
+//                     $state.go('anon.login');
+//                 }
+//             }
+//         }
+//     });
 
-}]);
+// }])
+
 

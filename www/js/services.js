@@ -86,10 +86,21 @@ angular.module('starter.services', [])
             }
         };
     })
-    .factory('tempDataService', function($http){
-       return{
-           GetData: function(){
-               $http.get('data/tempData.json');
-           }
-       }
+    .factory('tempDataService', function($http,$q){
+        return{
+            GetData: function(){
+                //We want to return a promised object.
+                //The reason for this is, we don't know WHEN it will return, but we know it will evenetually.
+                //Read more here: http://docs.angularjs.org/api/ng/service/$q
+
+                //First lets create our defered object.        
+                var tempDataDeferred = $q.defer();
+
+                $http.get('data/tempData.json').success(function(data) {
+                    tempDataDeferred.resolve(data);
+                });
+
+                return tempDataDeferred.promise;
+            }
+        }
     });
