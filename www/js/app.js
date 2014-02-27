@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
     ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login/');
+  $urlRouterProvider.otherwise('/'); //Default to dean for now
 
   // FIX for trailing slashes. Gracefully "borrowed" from https://github.com/angular-ui/ui-router/issues/50
   $urlRouterProvider.rule(function($injector, $location) {
