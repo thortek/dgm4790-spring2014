@@ -1,3 +1,5 @@
 *.keystore
+*.idea/*
+.DS_Store
 *.sw*
 platforms/^.*
