@@ -5,11 +5,22 @@
   navigation history that also transitions its views in and out.
 -->
 <view title="'Hello Mr Dean'">
-  <content has-header="true" padding="true">
-    <p></p>
-    <p>Hello world?</p>
+  <content has-header="true">
 
-      <div ng-repeat="event in tempData.events" ng-class-even="myClass">
+    <list>
+      <a class="item" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
+         Event: {{ event.eventName }}
+         <span class="item-note">
+			{{ event.department }}
+		</span>
+
+
+      </a>
+    </list>
+  </content>
+</view>
+
+<!--
           <p>ID:{{ event.id }}</p>
           <p>Department: {{ event.department }}</p>
           <p>Chair Name: {{ event.chairName }}</p>
@@ -26,19 +37,7 @@
           <p>Description: {{ event.description }}</p>
           <p>Notes: {{ event.notes }}</p>
 
-
-      </div>
-
-
-
-
-
-
-  </content>
-</view>
-
-
-
+-->
 
 
 
