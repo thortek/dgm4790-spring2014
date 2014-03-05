@@ -7,6 +7,8 @@
 <view title="'Hello Mr Dean'">
   <content has-header="true">
 
+    <a href="#/home-list">List View</a>
+      
     <list>
       <a class="item" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
          Event: {{ event.eventName }}
