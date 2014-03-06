@@ -9,7 +9,7 @@ angular.module('starter.controllers', [])
 })
 
 // Login Controller
-.controller('registerCtrl', function($scope, loginService, tempDataService) {
+.controller('registerCtrl', function($scope, loginService) {
   // "Login" is a service returning mock data (services.js)
   console.log('Regster fired');
 })
@@ -32,17 +32,5 @@ angular.module('starter.controllers', [])
 .controller('tempDataCtrl', function($scope, tempDataService) {
     // "GetData" is a service returning mock data (services.js)
     $scope.tempData = tempDataService.GetData();
-})
-
-.controller('userCtrl', function($scope, tempDataService) {
-  //Store our promise in a variable so we can do something when it resolves.
-  var promiseData = tempDataService.GetData();
-
-  //When it resolves, take the data it resolves with (tempData) and place it in the scpope.
-  promiseData.then(function(tempData) {
-    $scope.tempData = tempData; //Scope variable of temp data.
-  });
-
+    $scope.myClass = "grey"
 });
-
-
