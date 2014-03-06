@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" ng-app="carApp">
+<head>
+<meta charset="UTF-8">
+<title>Car List</title>
+</head>
+<body>
+
+<div ng-controller="carController">
+	<div ng-repeat="car in event.cars">
+	<h1>{{car.manufacturer}}</h1>
+	<p>Model: {{car.model}}</p>
+	<p>Price: ${{car.price}}</p>
+	<p>Wiki: <a href="{{car.wiki}}" target="_blank">{{car.wiki}}</a></p>
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js" ></script>
+<script src="nate-midterm-controller.js" ></script>
+</body>
+</html>
