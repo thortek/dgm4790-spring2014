@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="midtermApp">
+<head>
+	<meta charset="UTF-8">
+	<title>I luv cats</title>
+</head>
+<body>
+
+<h1>Thor's Cars</h1>
+<div ng-controller="midtermController">
+	<ul>
+		<li ng-repeat="car in cars">
+			<h3 ng-bind-template="{{car.manufacturer}} {{car.model}}"></h3>
+			<div><strong>Price:</strong> {{car.price | currency}}</div>
+			<a href="{{car.wiki}}">Learn More</a>
+		</li>
+	</ul>
+</div>
+
+<script src="angular.js"></script>
+<script src="tyler-midterm.js"></script>
+
+</body>
+</html>
