@@ -14,18 +14,27 @@
       </div>
     </div>
     
-    <!-- Login Block -->
+    <!-- Post Test -->
     <div class="list list-inset">
       <label class="item item-input">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Email" ng-model="creds.name">
       </label>
       <label class="item item-input">
-        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Password" ng-model="creds.password">
       </label>
-      <button class="button button-block button-royal">
-        Login
+      <button class="button button-block button-royal" ng-click="authenticate()">
+        POST Test
       </button>
     </div>
+
+    <!-- Login Block -->
+    <div class="list list-inset">
+      <button class="button button-block button-royal" ng-click="getTest()">
+        Get Test
+      </button>
+    </div>
+
+
     <p>Need an account? <a href="#/register">Sign up</a>.</p>
 
   </content>

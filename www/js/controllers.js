@@ -3,9 +3,42 @@ angular.module('starter.controllers', [])
 
 
 // Login Controller
-.controller('loginCtrl', function($scope, loginService) {
+.controller('loginCtrl', function($scope, loginService, $http) {
+
   // "Login" is a service returning mock data (services.js)
   console.log('LoginCtrl fired');
+
+  $scope.creds = {
+    name: "itterettedyingstillympon",
+    password: "pk8OePP26fjqE2VBTiRk5H7F"
+  };
+
+  $scope.authenticate = function() {
+
+    $http({
+      url: 'https://deanradar.cloudant.com/_session',
+      method: 'POST',
+      data: $scope.creds,
+      headers: {
+        'Content-Type':'application/x-www-form-urlencoded',
+        'Accept': '*/*',
+        'Cache-Control':'no-cache'
+      },
+      withCredentials: true
+    });
+
+    console.log($scope.creds);
+  }
+
+  $scope.getTest = function() {
+    $http({
+      url: 'https://deanradar.cloudant.com/_all_dbs',
+      method: 'GET',
+      data: '',
+      withCredentials: true,
+      params: $scope.creds
+    })
+  }
 })
 
 // Login Controller
