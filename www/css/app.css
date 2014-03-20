@@ -7,29 +7,3 @@
   height: 96px;
 }
 .grey{color:#666;}
-
-.Culinary, .Digital, .Computer, .Automotive, .Construction {
-	background-repeat:no-repeat;
-	background-position:10px 10px;
-	background-size:50px;
-}
-
-.Culinary {
-	background-image:url(../img/icons/icon_04_reversed.png);
-}
-
-.Digital {
-	background-image:url(../img/icons/icon_05_reversed.png);
-}
-
-.Computer {
-	background-image:url(../img/icons/icon_02_reversed.png);
-}
-
-.Automotive {
-	background-image:url(../img/icons/icon_01_reversed.png);
-}
-
-.Construction {
-	background-image:url(../img/icons/icon_03_reversed.png);
-}
