@@ -10,10 +10,10 @@
     <a href="#/home-list">List View</a>
       
     <list>
-      <a class="item" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
-         Event: {{ event.eventName }}
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+         Event: {{ event.value.eventName }}
          <span class="item-note">
-			{{ event.department }}
+			{{ event.value.department }}
 		</span>
 
 

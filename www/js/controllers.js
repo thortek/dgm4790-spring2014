@@ -41,6 +41,10 @@ angular.module('starter.controllers', [])
 
 
         Events.get(function(response) {
+
+            $scope.events = response.rows;
+            console.log(response.rows);
+
             console.log(response);
             for (var i=0; i<response.rows.length; i++) {
                 var doc = response.rows[i].value;
