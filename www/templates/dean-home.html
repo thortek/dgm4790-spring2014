@@ -8,7 +8,7 @@
   <content has-header="true">
       
     <div class="list">
-      <a class="item item-avatar" ng-repeat="event in events" href="#/data/{{event.id}}">
+      <a class="item item-avatar {{event.value.department}}" ng-repeat="event in events" href="#/event-details/{{event.value.eventName}}">
       	<img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          <h2>{{ event.value.eventName }}</h2>
          <p>{{event.value.StartDate}} - {{event.value.StartTime}}</p>
