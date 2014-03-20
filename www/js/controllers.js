@@ -22,7 +22,8 @@ angular.module('starter.controllers', [])
       headers: {
         'Content-Type':'application/x-www-form-urlencoded'
       },
-      withCredentials: true
+      withCredentials: true,
+      xsrfCookieName:"AuthSession"
     }).then( function(response){
       $timeout(function(){
         console.log(response);
