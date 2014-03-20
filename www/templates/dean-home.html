@@ -11,7 +11,7 @@
       <a class="item item-avatar" ng-repeat="event in events" href="#/event-details/{{event.value.eventName}}">
       	<img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          <h2>{{ event.value.eventName }}</h2>
-         <p>Date: {{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
+         <p>{{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
       </a>
     </div>
   </content>
