@@ -29,7 +29,7 @@
       
     <list>
       <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
-      	<img ng-src="{{ event.value.depticon }}" alt="{{ event.value.department }}" />
+      	<img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          Event: {{ event.value.eventName }}
          <span class="item-note">
 			{{ event.value.department }}
