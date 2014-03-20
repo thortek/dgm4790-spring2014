@@ -60,3 +60,7 @@ angular.module('starter.controllers', [])
         });
 
 });
+
+function forceOrder($scope) {
+      $scope.event = 'value.startDate';
+}
