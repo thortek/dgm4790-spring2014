@@ -50,11 +50,6 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         templateUrl: 'templates/dean-home.html',
         controller:'userCtrl'
       })
-      .state('user.list', {
-        url: '/home-list',
-        templateUrl: 'templates/dean-home-list.html',
-        controller:'userCtrl'
-      })
     ;
 
     $stateProvider
