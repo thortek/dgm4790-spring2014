@@ -4,16 +4,37 @@
   Each tab's child <nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
-<view title="'Hello Mr Dean'">
+<!--<view title="'Hello Mr Dean'">
   <content has-header="true">
-      <a href="#/">Normal View</a>
+
+    <a href="#/">List View</a>
+      
     <list>
-      <a class="item" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
-         Event: {{ event.eventName }}
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+         Event: {{ event.value.eventName }}
          <span class="item-note">
-			{{ event.department }}
+			{{ event.value.department }}
 		</span>
 
+
+      </a>
+    </list>
+  </content>
+</view>-->
+
+<view title="'Hello Mr Dean'">
+  <content has-header="true">
+
+    <a href="#/">Normal View</a>
+      
+    <list>
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+         Event: {{ event.value.eventName }}
+         <span class="item-note">
+			{{ event.value.department }}
+		</span>
+
+			<span>{{ event.location.city }}</span>
 
       </a>
     </list>
@@ -23,9 +44,11 @@
 <!--
           <p>ID:{{ event.id }}</p>
           <p>Department: {{ event.department }}</p>
+          <p>Department Icon: <img src="{{ event.icon }}"></p>
           <p>Chair Name: {{ event.chairName }}</p>
           <p>Event Name: {{ event.eventName }}</p>
           <p>Start Date: {{ event.StartDate }}</p>
+          <p>Start Time: {{ event.StartTime }}</p>
           <p>End Date: {{ event.endDate }}</p>
           <p>Date Submitted: {{ event.dateSubmitted }}</p>
           <p>Location: </p>
