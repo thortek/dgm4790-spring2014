@@ -24,16 +24,20 @@
 
 <view title="'Hello Mr Dean'">
   <content has-header="true">
-      <a href="#/">List View</a>
-    <div class="list">
-      <a class="item item-thumbnail-left" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
-      	<img src="{{ event.icon }}">
-         <h2>{{ event.eventName }}</h2>
-         <p>
-			{{ event.StartDate }} {{ event.StartTime }}
-		</p>
+
+    <a href="#/">Normal View</a>
+      
+    <list>
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+         Event: {{ event.value.eventName }}
+         <span class="item-note">
+			{{ event.value.department }}
+		</span>
+
+			<span>{{ event.location.city }}</span>
+
       </a>
-    </div>
+    </list>
   </content>
 </view>
 
