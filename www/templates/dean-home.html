@@ -6,15 +6,19 @@
 -->
 <view title="'Hello Mr Dean'">
   <content has-header="true">
-      <a href="#/home-list">List View</a>
-    <div class="list">
-      <a class="item item-avatar {{event.value.department}}" ng-repeat="event in events" href=href="#/event-details/{{event.value.eventName}}">
-         <h2>{{ event.value.eventName }}</h2>
-         <p>
-      {{ event.value.StartDate }} {{ event.value.StartTime }}
-    </p>
+      
+    <list>
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+      	<img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
+         Event: {{ event.value.eventName }}
+         <span class="item-note">
+			{{ event.value.department }}
+		</span>
+
+			<span>{{ event.location.city }}</span>
+
       </a>
-    </div>
+    </list>
   </content>
 </view>
 
@@ -70,3 +74,27 @@
 
 <!-- </tabs>
  -->
+ 
+ 
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<!--<view title="'Hello Mr Dean'">
+  <content has-header="true">
+
+    <a href="#/">List View</a>
+      
+    <list>
+      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
+         Event: {{ event.value.eventName }}
+         <span class="item-note">
+			{{ event.value.department }}
+		</span>
+
+
+      </a>
+    </list>
+  </content>
+</view>-->
