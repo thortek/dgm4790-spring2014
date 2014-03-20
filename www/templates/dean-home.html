@@ -7,15 +7,15 @@
 <view title="'Hello Mr Dean'">
   <content has-header="true">
       <a href="#/home-list">List View</a>
-    <div class="list">
-      <a class="item item-thumbnail-left" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
-      	<img src="{{ event.icon }}">
-         <h2>{{ event.eventName }}</h2>
+    <list>
+      <a class="item item-thumbnail-left" ng-repeat="event in events" href="#/data/{{event.id}}">
+      	<img src="{{ event.value.icon }}">
+         <h2>{{ event.value.eventName }}</h2>
          <p>
-			{{ event.StartDate }} {{ event.StartTime }}
+			{{ event.value.StartDate }} {{ event.value.StartTime }}
 		</p>
       </a>
-    </div>
+    </list>
   </content>
 </view>
 
