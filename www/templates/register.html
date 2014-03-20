@@ -9,23 +9,23 @@
     <!-- Login Block -->
     <div class="list list-inset">
       <label for="" class="item item-input">
-        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="First Name" ng-model="">
       </label>
       
       <label for="" class="item item-input">
-        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Last Name" ng-model="">
       </label>
       
       <label class="item item-input">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Email" ng-model="">
       </label>
       <label class="item item-input">
-        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Password" ng-model="">
       </label>
       
       <div class="button-bar">
-        <a class="button button-block button-royal" href="#/tab/register/1">
-          Next
+        <a class="button button-block button-royal" ng-click="createUser()">
+          Register
         </a>
       </div>
 

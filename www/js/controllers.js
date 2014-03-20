@@ -3,28 +3,59 @@ angular.module('starter.controllers', [])
 
 
 // Login Controller
-.controller('loginCtrl', function($scope, loginService, $http) {
+.controller('loginCtrl', function($scope, loginService, $http, $cookies, $timeout) {
 
   // "Login" is a service returning mock data (services.js)
   console.log('LoginCtrl fired');
 
   $scope.creds = {
-    name: "itterettedyingstillympon",
-    password: "pk8OePP26fjqE2VBTiRk5H7F"
+    name: "deanradar",
+    password: "dgm4790!THOR"
   };
 
-  $scope.authenticate = function() {
+  $scope.postCookie = function() {
 
     $http({
       url: 'https://deanradar.cloudant.com/_session',
       method: 'POST',
-      data: $scope.creds,
+      data: "name=deanradar&password=dgm4790!THOR",
       headers: {
-        'Content-Type':'application/x-www-form-urlencoded',
-        'Accept': '*/*',
-        'Cache-Control':'no-cache'
+        'Content-Type':'application/x-www-form-urlencoded'
       },
       withCredentials: true
+    }).then( function(response){
+      $timeout(function(){
+        console.log(response);
+        console.log($cookies);
+      }); 
+
+    });
+
+    console.log($scope.creds);
+  }
+
+  $scope.deleteCookie = function() {
+
+    $http({
+      url: 'https://deanradar.cloudant.com/_session',
+      method: 'DELETE',
+      data: "",
+      headers: {
+        'Accept': '*/*'
+      }
+    });
+
+    console.log($scope.creds);
+  }
+
+  $scope.getCookie = function() {
+
+    $http({
+      url: 'https://deanradar.cloudant.com/_session',
+      method: 'GET',
+      headers: {
+        'Accept': '*/*'
+      }
     });
 
     console.log($scope.creds);
@@ -44,7 +75,14 @@ angular.module('starter.controllers', [])
 // Login Controller
 .controller('registerCtrl', function($scope, loginService, tempDataService) {
   // "Login" is a service returning mock data (services.js)
-  console.log('Regster fired');
+  $scope.userDetails = {
+    fname:'',
+    lname:'',
+    email:'',
+    password:''
+  };
+
+
 })
 
 

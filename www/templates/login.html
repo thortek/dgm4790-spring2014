@@ -22,8 +22,22 @@
       <label class="item item-input">
         <input type="password" placeholder="Password" ng-model="creds.password">
       </label>
-      <button class="button button-block button-royal" ng-click="authenticate()">
-        POST Test
+      <button class="button button-block button-royal" ng-click="postCookie()">
+        POST Session
+      </button>
+    </div>
+
+    <!-- Delete Session -->
+    <div class="list list-inset">
+      <button class="button button-block button-royal" ng-click="deleteCookie()">
+        Delete Sesssion
+      </button>
+    </div>
+    
+    <!-- Get Session -->
+    <div class="list list-inset">
+      <button class="button button-block button-royal" ng-click="getCookie()">
+        Get Session
       </button>
     </div>
 
@@ -33,6 +47,9 @@
         Get Test
       </button>
     </div>
+
+
+
 
 
     <p>Need an account? <a href="#/register">Sign up</a>.</p>
