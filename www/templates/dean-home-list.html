@@ -28,7 +28,7 @@
     <a href="#/">Normal View</a>
       
     <list>
-      <a ng-class="item {{event.value.class}}" ng-repeat="event in events" href="#/data/{{event.id}}">
+      <a class="item" ng-class="{{event.value.class}}" ng-repeat="event in events" href="#/data/{{event.id}}">
          Event: {{ event.value.eventName }}
          <span class="item-note">
 			{{ event.value.department }}
