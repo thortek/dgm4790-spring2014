@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ngResource'])
     /**
      * A simple example service that returns some data.
      */
@@ -103,4 +103,8 @@ angular.module('starter.services', [])
                 return tempDataDeferred.promise;
             }
         }
+    })
+    .factory('Events', function($resource) {
+        // Resource that points directly to all events
+        return $resource('http://uvutest.learningcomponents.com/api/events', {});
     });
