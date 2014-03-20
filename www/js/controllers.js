@@ -38,8 +38,6 @@ angular.module('starter.controllers', [])
  //   $scope.tempData = tempData; //Scope variable of temp data.
  // });
 
-
-
         Events.get(function(response) {
 
             $scope.events = response.rows;
