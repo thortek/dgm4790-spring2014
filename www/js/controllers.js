@@ -59,4 +59,14 @@ angular.module('starter.controllers', [])
             console.log(error);
         });
 
-});
+})
+.controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
+  $scope.event = {};
+
+  $scope.submitEvent = function() {
+    console.log($scope.event);
+    var newEvent = $resource('http://deanradar.cloudant.com/events/');
+    newEvent.save([], $scope.event);
+
+  };
+}]);

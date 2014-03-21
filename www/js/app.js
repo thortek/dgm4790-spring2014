@@ -63,6 +63,11 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         templateUrl: 'templates/event-details.html',
         controller:'userCtrl'
       })
+      .state('addEvent', {
+        url:"/add-event/",
+        templateUrl:"templates/add-event.html",
+        controller:'addEventCtrl'
+      })
     ;
 
   // if none of the above states are matched, use this as the fallback
