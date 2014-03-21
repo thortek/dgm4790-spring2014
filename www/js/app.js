@@ -57,6 +57,14 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
       })
     ;
 
+    $stateProvider
+      .state('eventDetails', {
+        url:'/event-details/:eventName',
+        templateUrl: 'templates/event-details.html',
+        controller:'userCtrl'
+      })
+    ;
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/'); //Default to dean for now
 

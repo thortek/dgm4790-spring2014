@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('userCtrl', function($scope, Events, tempDataService) {
+.controller('userCtrl', function($scope, Events, tempDataService, $stateParams) {
   //Store our promise in a variable so we can do something when it resolves.
  // var promiseData = tempDataService.GetData();
         $scope.myClass = "grey"
@@ -38,14 +38,22 @@ angular.module('starter.controllers', [])
  //   $scope.tempData = tempData; //Scope variable of temp data.
  // });
 
-
-
         Events.get(function(response) {
-            console.log(response);
+
+            $scope.events = response.rows;
+            // console.log(response.rows);
+
+            // console.log(response);
             for (var i=0; i<response.rows.length; i++) {
                 var doc = response.rows[i].value;
                 //$scope.tempData.push(doc);
-                console.log(doc);
+                // console.log(doc);
+
+                if (doc.eventName === $stateParams.eventName) {
+                   console.log($stateParams, 'we have a match');
+                   console.log(doc);
+                   $scope.theEvent =  doc;
+                }
             }
         }, function(error) {
             console.log(error);

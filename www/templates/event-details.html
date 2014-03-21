@@ -4,51 +4,40 @@
   Each tab's child <nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
-<!--<view title="'Hello Mr Dean'">
-  <content has-header="true">
-
-    <a href="#/">List View</a>
-      
-    <list>
-      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
-         Event: {{ event.value.eventName }}
-         <span class="item-note">
-			{{ event.value.department }}
-		</span>
-
-
-      </a>
-    </list>
-  </content>
-</view>-->
-
 <view title="'Hello Mr Dean'">
   <content has-header="true">
 
-    <a href="#/">Normal View</a>
-      
-    <list>
-      <a class="item" ng-repeat="event in events" href="#/data/{{event.id}}">
-         Event: {{ event.value.eventName }}
-         <span class="item-note">
-			{{ event.value.department }}
-		</span>
+    <a href="#/home-list">List View</a>
+    
+    <br />
 
-			<span>{{ event.location.city }}</span>
+    		<p>ID:{{ theEvent.id }}</p>
+          <p>Department: {{ theEvent.department }}</p>
+          <p>Chair Name: {{ theEvent.chairName }}</p>
+          <p>Event Name: {{ theEvent.eventName }}</p>
+          <p>Start Date: {{ theEvent.StartDate }}</p>
+          <p>End Date: {{ theEvent.endDate }}</p>
+          <p>Date Submitted: {{ theEvent.dateSubmitted }}</p>
+          <p>Location: </p>
+          <p>Building: {{ theEvent.location.building }}</p>
+          <p>Street: {{ theEvent.location.street }}</p>
+          <p>City: {{ theEvent.location.city }}</p>
+          <p>Other: {{ theEvent.location.other }}</p>
+          <p>URL: {{ theEvent.url }}</p>
+          <p>Description: {{ theEvent.description }}</p>
+          <p>Notes: {{ theEvent.notes }}</p>
 
-      </a>
-    </list>
+
+
   </content>
 </view>
 
 <!--
           <p>ID:{{ event.id }}</p>
           <p>Department: {{ event.department }}</p>
-          <p>Department Icon: <img src="{{ event.icon }}"></p>
           <p>Chair Name: {{ event.chairName }}</p>
           <p>Event Name: {{ event.eventName }}</p>
           <p>Start Date: {{ event.StartDate }}</p>
-          <p>Start Time: {{ event.StartTime }}</p>
           <p>End Date: {{ event.endDate }}</p>
           <p>Date Submitted: {{ event.dateSubmitted }}</p>
           <p>Location: </p>

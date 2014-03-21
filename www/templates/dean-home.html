@@ -6,17 +6,22 @@
 -->
 <view title="'Hello Mr Dean'">
   <content has-header="true">
-
-    <a href="#/home-list">List View</a>
-      
+      <a href="#/home-list">List View</a>
     <list>
-      <a class="item" ng-repeat="event in tempData.events" href="#/data/{{event.id}}">
-         Event: {{ event.eventName }}
+
+      <a class="item" ng-repeat="event in events" href="#/event-details/{{event.value.eventName}}">
+         
+
+
+      	<img src="{{ event.value.icon }}">
+         <h2>{{ event.value.eventName }}</h2>
+         <p>
+			{{ event.value.StartDate }} {{ event.value.StartTime }}
+		</p>
+
          <span class="item-note">
-			{{ event.department }}
-		</span>
-
-
+         {{ event.value.department }}
+         </span>
       </a>
     </list>
   </content>
