@@ -33,8 +33,17 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
           controller:'deanCtrl'
         }
       }
-    }).
-    state('dean.about', {
+    })
+    .state('dean.eventDetails', {
+      url:'/events/:eventName',
+      views: {
+        'tab1' : {
+          templateUrl: 'templates/event-details.html',
+          controller:'deanCtrl'
+        }
+      }
+    })
+    .state('dean.about', {
       url:"/about",
       views: {
         'tab2': {
@@ -52,25 +61,6 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         }
       }
     });
-
-    $stateProvider
-      .state('user', {
-        abstract: true,
-        template: '<nav-view/>'
-      })
-      .state('user.home', {
-        url: '/',
-        templateUrl: 'templates/dean-home.html',
-        controller:'userCtrl'
-      })
-    ;
-
-    $stateProvider
-      .state('eventDetails', {
-        url:'/event-details/:eventName',
-        templateUrl: 'templates/event-details.html',
-        controller:'userCtrl'
-      });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/dean/events'); //Default to dean for now

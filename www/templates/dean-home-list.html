@@ -12,7 +12,7 @@
     <a href="" ng-click="event = 'value.department';">Department</a> |
     <a href="" ng-click="event = 'value.startDate';">Date</a> |
     <a href="" ng-click="event = 'value.eventName';">Event Name</a>
-      <a class="item item-avatar" ng-repeat="event in events | orderBy:event | filter:search" href="#/event-details/{{event.value.eventName}}">
+      <a class="item item-avatar" ng-repeat="event in events | orderBy:event | filter:search" href="#/dean/events/{{event.value.eventName}}">
         <img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          <h2>{{ event.value.eventName }}</h2>
          <p>{{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
