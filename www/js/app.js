@@ -16,28 +16,41 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
   // Each state's controller can be found in controllers.js
 
   //Define access from routingConfig.js
-  var access = routingConfig.accessLevels;
+  //var access = routingConfig.accessLevels;
 
   $stateProvider
-    // setup a login state
-    .state('anon', {
+    .state('dean', {
+      url:'/dean',
       abstract: true,
-      template: "<nav-view/>",
-      data : {
-        access: access.anon
+      templateUrl:'templates/dean-home.html',
+      controller:'deanCtrl',
+    })
+    .state('dean.events', {
+      url:"/events",
+      views: {
+        'tab1': {
+          templateUrl:'templates/dean-home-list.html',
+          controller:'deanCtrl'
+        }
+      }
+    }).
+    state('dean.about', {
+      url:"/about",
+      views: {
+        'tab2': {
+          templateUrl:'templates/about.html',
+          controller:'deanCtrl'
+        }
       }
     })
-
-    .state('anon.login', {
-      url: "/login/",
-      templateUrl: 'templates/login.html',
-      controller: 'loginCtrl'
-    })
-
-    .state('anon.register', {
-      url: '/register/',
-      templateUrl: 'templates/register.html',
-      controller: 'registerCtrl'
+    .state('dean.addEvent', {
+      url:'/add-event',
+      views: {
+        'tab3': {
+          templateUrl:'templates/add-event.html',
+          controller:'addEventCtrl'
+        }
+      }
     });
 
     $stateProvider
@@ -57,11 +70,10 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         url:'/event-details/:eventName',
         templateUrl: 'templates/event-details.html',
         controller:'userCtrl'
-      })
-    ;
+      });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/'); //Default to dean for now
+  $urlRouterProvider.otherwise('/dean/events'); //Default to dean for now
 
   // FIX for trailing slashes. Gracefully "borrowed" from https://github.com/angular-ui/ui-router/issues/50
   $urlRouterProvider.rule(function($injector, $location) {
@@ -93,26 +105,3 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
     });
 
 });
-
-//Run this off the bat to determine state and act accordingly
-// .run(['$rootScope', '$state', 'Auth', function ($rootScope, $state, Auth) {
-
-//     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
-//         if (!Auth.authorize(toState.data.access)) {
-//             $rootScope.error = "Seems like you tried accessing a route you don't have access to...";
-//             event.preventDefault();
-            
-//             if(fromState.url === '^') {
-//                 if(Auth.isLoggedIn())
-//                     $state.go('user.home');
-//                 else {
-//                     $rootScope.error = null;
-//                     $state.go('anon.login');
-//                 }
-//             }
-//         }
-//     });
-
-// }])
-
-

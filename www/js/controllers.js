@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('userCtrl', function($scope, Events, tempDataService, $stateParams) {
+.controller('deanCtrl', function($scope, Events, tempDataService, $stateParams) {
   //Store our promise in a variable so we can do something when it resolves.
  // var promiseData = tempDataService.GetData();
         $scope.myClass = "grey"
@@ -58,8 +58,16 @@ angular.module('starter.controllers', [])
         }, function(error) {
             console.log(error);
         });
+}).controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
+  $scope.event = {};
 
-});
+  $scope.submitEvent = function() {
+    console.log($scope.event);
+    var newEvent = $resource('http://uvutest.learningcomponents.com/api/addevent');
+    newEvent.save([], $scope.event);
+
+  };
+}]);
 
 function forceOrder($scope) {
       $scope.event = 'value.startDate';

@@ -1,0 +1,39 @@
+<view title="'Hello Mr Dean'">
+  <content has-header="true" has-tabs="true">
+    <list>
+      <input type="text" ng-model="event.department" placeholder="Deparment">
+      <input type="text" ng-model="event.chairName" placeholder="chairName">
+      <input type="text" ng-model="event.eventName" placeholder="eventName">
+      <input type="text" ng-model="event.StartDate" placeholder="StartDate">
+      <input type="text" ng-model="event.endDate" placeholder="endDate">
+      <input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted">
+      <input type="text" ng-model="event.location.building" placeholder="building">
+      <input type="text" ng-model="event.location.street" placeholder="street">
+      <input type="text" ng-model="event.location.city" placeholder="city">
+      <input type="text" ng-model="event.location.other" placeholder="other">
+      <input type="text" ng-model="event.url" placeholder="url">
+      <input type="text" ng-model="vent.description" placeholder="description">
+      <input type="text" ng-model="event.notes" placeholder="notes">
+    </list>
+      <button ng-click="submitEvent()">Add Event</button>
+  </content>
+</view>
+
+<!--
+          <p>ID:{{ event.id }}</p>
+          <p>Department: {{ event.department }}</p>
+          <p>Chair Name: {{ event.chairName }}</p>
+          <p>Event Name: {{ event.eventName }}</p>
+          <p>Start Date: {{ event.StartDate }}</p>
+          <p>End Date: {{ event.endDate }}</p>
+          <p>Date Submitted: {{ event.dateSubmitted }}</p>
+          <p>Location: </p>
+          <p>Building: {{ event.location.building }}</p>
+          <p>Street: {{ event.location.street }}</p>
+          <p>City: {{ event.location.city }}</p>
+          <p>Other: {{ event.location.other }}</p>
+          <p>URL: {{ event.url }}</p>
+          <p>Description: {{ event.description }}</p>
+          <p>Notes: {{ event.notes }}</p>
+
+-->
