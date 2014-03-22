@@ -16,62 +16,113 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
   // Each state's controller can be found in controllers.js
 
   //Define access from routingConfig.js
-  var access = routingConfig.accessLevels;
+  //var access = routingConfig.accessLevels;
 
   $stateProvider
-    // setup a login state
-    .state('anon', {
+    .state('dean', {
+      url:'/dean',
       abstract: true,
-      template: "<nav-view/>",
-      data : {
-        access: access.anon
+      templateUrl:'templates/dean-home.html',
+      controller:'deanCtrl',
+    })
+    .state('dean.events', {
+      url:"/events",
+      views: {
+        'tab1': {
+          templateUrl:'templates/dean-home-list.html',
+          controller:'deanCtrl'
+        }
+      }
+    }).
+    state('dean.about', {
+      url:"/about",
+      views: {
+        'tab2': {
+          templateUrl:'templates/about.html',
+          controller:'deanCtrl'
+        }
       }
     })
-
-    .state('anon.login', {
-      url: "/login/",
-      templateUrl: 'templates/login.html',
-      controller: 'loginCtrl'
-    })
-
-    .state('anon.register', {
-      url: '/register/',
-      templateUrl: 'templates/register.html',
-      controller: 'registerCtrl'
+    .state('dean.addEvent', {
+      url:'/add-event',
+      views: {
+        'tab3': {
+          templateUrl:'templates/add-event.html',
+          controller:'addEventCtrl'
+        }
+      }
     });
 
-    $stateProvider
-      .state('user', {
-        abstract: true,
-        template: '<nav-view/>'
-      })
-      .state('user.home', {
-        url: '/',
-        templateUrl: 'templates/dean-home.html',
-        controller:'userCtrl'
-      })
-      .state('user.list', {
-        url: '/home-list',
-        templateUrl: 'templates/dean-home-list.html',
-        controller:'userCtrl'
-      })
-    ;
 
-    $stateProvider
-      .state('eventDetails', {
-        url:'/event-details/:eventName',
-        templateUrl: 'templates/event-details.html',
-        controller:'userCtrl'
-      })
-      .state('addEvent', {
-        url:"/add-event/",
-        templateUrl:"templates/add-event.html",
-        controller:'addEventCtrl'
-      })
-    ;
+
+  // $stateProvider
+  //   // setup a login state
+  //   .state('anon', {
+  //     abstract: true,
+  //     template: "<nav-view/>",
+  //     data : {
+  //       access: access.anon
+  //     }
+  //   })
+
+  //   .state('anon.login', {
+  //     url: "/login/",
+  //     templateUrl: 'templates/login.html',
+  //     controller: 'loginCtrl'
+  //   })
+
+  //   .state('anon.register', {
+  //     url: '/register/',
+  //     templateUrl: 'templates/register.html',
+  //     controller: 'registerCtrl'
+  //   });
+
+    // $stateProvider
+    //   .state('dean', {
+    //     abstract: true,
+    //     templateUrl: "templates/tabs.html"
+    //   })
+    //   // the pet tab has its own child nav-view and history
+    //   .state('tab.dean-index', {
+    //     url: '/',
+    //     views: {
+    //       'events-tab': {
+    //         templateUrl: 'templates/dean-home.html',
+    //         controller: 'deanCtrl'
+    //       }
+    //     }
+    //   })
+    //   .state('tab.add-event', {
+    //     url:'/add-event/',
+    //     view: {
+    //       'register-tab': {
+    //         templateUrl: 'templates/add-event.html',
+    //         controller: 'addEventCtrl'
+    //       }
+    //     }
+    //   })
+    //   .state('user.list', {
+    //     url: '/home-list',
+    //     templateUrl: 'templates/dean-home-list.html',
+    //     controller:'userCtrl'
+    //   })
+    // ;
+
+    // $stateProvider
+    //   .state('eventDetails', {
+    //     url:'/event-details/:eventName',
+    //     templateUrl: 'templates/event-details.html',
+    //     controller:'userCtrl'
+    //   })
+    //   .state('addEvent', {
+    //     url:"/add-event/",
+    //     templateUrl:"templates/add-event.html",
+    //     controller:'addEventCtrl'
+    //   })
+    // ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/'); //Default to dean for now
+  $urlRouterProvider.otherwise('/dean/events'); //Default to dean for now
 
   // FIX for trailing slashes. Gracefully "borrowed" from https://github.com/angular-ui/ui-router/issues/50
   $urlRouterProvider.rule(function($injector, $location) {

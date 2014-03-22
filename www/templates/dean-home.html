@@ -4,78 +4,23 @@
   Each tab's child <nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
-<view title="'Hello Mr Dean'">
-  <content has-header="true">
-      <a href="#/home-list">List View</a>
-    <list>
 
-      <a class="item" ng-repeat="event in events" href="#/event-details/{{event.value.eventName}}">
-         
+<tabs tabs-style="tabs-icon-top" tabs-type="tabs-default">
 
-
-      	<img src="{{ event.value.icon }}">
-         <h2>{{ event.value.eventName }}</h2>
-         <p>
-			{{ event.value.StartDate }} {{ event.value.StartTime }}
-		</p>
-
-         <span class="item-note">
-         {{ event.value.department }}
-         </span>
-      </a>
-    </list>
-  </content>
-</view>
-
-<!--
-          <p>ID:{{ event.id }}</p>
-          <p>Department: {{ event.department }}</p>
-          <p>Chair Name: {{ event.chairName }}</p>
-          <p>Event Name: {{ event.eventName }}</p>
-          <p>Start Date: {{ event.StartDate }}</p>
-          <p>End Date: {{ event.endDate }}</p>
-          <p>Date Submitted: {{ event.dateSubmitted }}</p>
-          <p>Location: </p>
-          <p>Building: {{ event.location.building }}</p>
-          <p>Street: {{ event.location.street }}</p>
-          <p>City: {{ event.location.city }}</p>
-          <p>Other: {{ event.location.other }}</p>
-          <p>URL: {{ event.url }}</p>
-          <p>Description: {{ event.description }}</p>
-          <p>Notes: {{ event.notes }}</p>
-
--->
-
-
-
-
-
-
-
-<!-- 
-
-  Leaving code below for now, helpful when determining how to load things into a named view.
-
-  <tabs tabs-style="tabs-icon-top" tabs-type="tabs-default"> -->
-
-
-  <!-- Pets Tab -->
-<!--   <tab title="Home" icon="icon ion-home" href="#/tab/pets">
-    <nav-view name="login-tab"></nav-view>
+  <tab title="Events" icon="icon ion-home" href="#/dean/events">
+    <nav-view name="tab1"></nav-view>
   </tab>
- -->
 
-  <!-- Adopt Tab -->
-  <!-- <tab title="Register" icon="icon ion-ios7-bookmarks" href="#/tab/register">
-    <nav-view name="register-tab"></nav-view>
+
+  <tab title="About" icon="icon ion-ios7-bookmarks" href="#/dean/about">
+    <nav-view name="tab2">
+      temp tab2
+    </nav-view>
   </tab>
- -->
 
-  <!-- About Tab -->
-  <!-- <tab title="Add Radar Item" icon="icon ion-compose" href="#/tab/about">
-    <nav-view name="about-tab"></nav-view>
-  </tab> -->
+  <tab title="Add Event" icon="icon ion-ios7-bookmarks" href="#/dean/add-event">
+    <nav-view name="tab3">
+    </nav-view>
+  </tab>
 
-
-<!-- </tabs>
- -->
+</tabs>

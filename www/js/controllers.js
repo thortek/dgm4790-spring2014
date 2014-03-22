@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('userCtrl', function($scope, Events, tempDataService, $stateParams) {
+.controller('deanCtrl', function($scope, Events, tempDataService, $stateParams) {
   //Store our promise in a variable so we can do something when it resolves.
  // var promiseData = tempDataService.GetData();
         $scope.myClass = "grey"
@@ -65,7 +65,7 @@ angular.module('starter.controllers', [])
 
   $scope.submitEvent = function() {
     console.log($scope.event);
-    var newEvent = $resource('http://deanradar.cloudant.com/events/');
+    var newEvent = $resource('http://uvutest.learningcomponents.com/api/addevent');
     newEvent.save([], $scope.event);
 
   };
