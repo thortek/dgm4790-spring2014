@@ -53,73 +53,24 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
       }
     });
 
+    $stateProvider
+      .state('user', {
+        abstract: true,
+        template: '<nav-view/>'
+      })
+      .state('user.home', {
+        url: '/',
+        templateUrl: 'templates/dean-home.html',
+        controller:'userCtrl'
+      })
+    ;
 
-
-  // $stateProvider
-  //   // setup a login state
-  //   .state('anon', {
-  //     abstract: true,
-  //     template: "<nav-view/>",
-  //     data : {
-  //       access: access.anon
-  //     }
-  //   })
-
-  //   .state('anon.login', {
-  //     url: "/login/",
-  //     templateUrl: 'templates/login.html',
-  //     controller: 'loginCtrl'
-  //   })
-
-  //   .state('anon.register', {
-  //     url: '/register/',
-  //     templateUrl: 'templates/register.html',
-  //     controller: 'registerCtrl'
-  //   });
-
-    // $stateProvider
-    //   .state('dean', {
-    //     abstract: true,
-    //     templateUrl: "templates/tabs.html"
-    //   })
-    //   // the pet tab has its own child nav-view and history
-    //   .state('tab.dean-index', {
-    //     url: '/',
-    //     views: {
-    //       'events-tab': {
-    //         templateUrl: 'templates/dean-home.html',
-    //         controller: 'deanCtrl'
-    //       }
-    //     }
-    //   })
-    //   .state('tab.add-event', {
-    //     url:'/add-event/',
-    //     view: {
-    //       'register-tab': {
-    //         templateUrl: 'templates/add-event.html',
-    //         controller: 'addEventCtrl'
-    //       }
-    //     }
-    //   })
-    //   .state('user.list', {
-    //     url: '/home-list',
-    //     templateUrl: 'templates/dean-home-list.html',
-    //     controller:'userCtrl'
-    //   })
-    // ;
-
-    // $stateProvider
-    //   .state('eventDetails', {
-    //     url:'/event-details/:eventName',
-    //     templateUrl: 'templates/event-details.html',
-    //     controller:'userCtrl'
-    //   })
-    //   .state('addEvent', {
-    //     url:"/add-event/",
-    //     templateUrl:"templates/add-event.html",
-    //     controller:'addEventCtrl'
-    //   })
-    // ;
+    $stateProvider
+      .state('eventDetails', {
+        url:'/event-details/:eventName',
+        templateUrl: 'templates/event-details.html',
+        controller:'userCtrl'
+      });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/dean/events'); //Default to dean for now
@@ -154,26 +105,3 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
     });
 
 });
-
-//Run this off the bat to determine state and act accordingly
-// .run(['$rootScope', '$state', 'Auth', function ($rootScope, $state, Auth) {
-
-//     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
-//         if (!Auth.authorize(toState.data.access)) {
-//             $rootScope.error = "Seems like you tried accessing a route you don't have access to...";
-//             event.preventDefault();
-            
-//             if(fromState.url === '^') {
-//                 if(Auth.isLoggedIn())
-//                     $state.go('user.home');
-//                 else {
-//                     $rootScope.error = null;
-//                     $state.go('anon.login');
-//                 }
-//             }
-//         }
-//     });
-
-// }])
-
-

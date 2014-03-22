@@ -58,9 +58,7 @@ angular.module('starter.controllers', [])
         }, function(error) {
             console.log(error);
         });
-
-})
-.controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
+}).controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
   $scope.event = {};
 
   $scope.submitEvent = function() {
@@ -70,3 +68,7 @@ angular.module('starter.controllers', [])
 
   };
 }]);
+
+function forceOrder($scope) {
+      $scope.event = 'value.startDate';
+}
