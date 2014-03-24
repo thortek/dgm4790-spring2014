@@ -2,17 +2,34 @@
   <content has-header="true" has-tabs="true" has-footer="true">
     <list>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.department" placeholder="Deparment"></label>
+      <label class="item item-input"><input type="text" ng-model="event.department" placeholder="Department"></label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.chairName" placeholder="chairName"></label>
+<label class="item item-input">
+  <select ng-model="event.department">
+  </select>
+</label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.eventName" placeholder="eventName"></label>
+<label class="item item-input item-stacked-label">
+  <span class="input-label">Chair Name</span>
+  <input type="text" placeholder="Thor Anderson" ng-model="event.chairName">
+</label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.StartDate" placeholder="StartDate"></label>
+<label class="item item-input item-stacked-label">
+  <span class="input-label">Event Name</span>
+  <input type="text" placeholder="Event-a-thon" ng-model="event.eventName">
+</label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.endDate" placeholder="endDate"></label>
+<label class="item item-input">
+  <span class="input-label">Start Date</span>
+  <input type="date" ng-model="event.endDate">
+</label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
+<label class="item item-input">
+  <span class="input-label">End Date</span>
+  <input type="date" ng-model="event.endDate">
+</label>
+
+      <!-- <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label> -->
 
       <label for="" class="item item-input"><input type="text" ng-model="event.location.building" placeholder="building"></label>
 

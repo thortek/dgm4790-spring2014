@@ -6,8 +6,12 @@
 -->
 <view title="'Hello Mr Dean'">
   <content has-header="true" has-footer="true">
-      Search: <input ng-model="search">
       
+<label class="item item-input">
+  <i class="icon ion-search placeholder-icon"></i>
+  <input type="search" placeholder="Search" ng-model="search">
+</label>
+
     <div class="list" ng-controller="forceOrder">
     <a href="" ng-click="event = 'value.department';">Department</a> |
     <a href="" ng-click="event = 'value.startDate';">Date</a> |
