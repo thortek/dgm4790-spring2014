@@ -2,7 +2,7 @@
   <content has-header="true" has-tabs="true" has-footer="true">
     <list>
 
-      <label class="item item-input"><input type="text" ng-model="event.department" placeholder="Department"></label>
+<label class="item item-input"><input type="text" ng-model="event.department" placeholder="Department"></label>
 
 <label class="item item-input">
   <select ng-model="event.department">
@@ -21,7 +21,7 @@
 
 <label class="item item-input">
   <span class="input-label">Start Date</span>
-  <input type="date" ng-model="event.endDate">
+  <input type="date" ng-model="event.startDate">
 </label>
 
 <label class="item item-input">
@@ -29,8 +29,10 @@
   <input type="date" ng-model="event.endDate">
 </label>
 
-      <!-- <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label> -->
+      <!-- Please change this to programmatically add date submitted, not manually
 
+      <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
+ -->
       <label for="" class="item item-input"><input type="text" ng-model="event.location.building" placeholder="building"></label>
 
       <label for="" class="item item-input"><input type="text" ng-model="event.location.street" placeholder="street"></label>
