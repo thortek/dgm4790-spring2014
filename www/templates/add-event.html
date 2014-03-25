@@ -1,5 +1,5 @@
 <view title="'Add-Event'">
-    <content has-header="true" padding="true" has-tabs="true" has-footer="true">
+    <content has-header="true" has-tabs="true" has-footer="true">
         <!-- <list> -->
 
         <!--Choose Department-->
@@ -12,7 +12,7 @@
                     <label class="item item-radio col">
                         <input type="radio" name="dept" value="department.abrv">
                         <div class="item">
-                            {{ department.name }}
+                            <h4>{{ department.name }}</h4>
                         </div>
                         <i class="radio-icon ion-checkmark-circled"></i>
                     </label>
@@ -41,12 +41,12 @@
 
             <div class="row">
                 <label class="item item-input col">
-                    <span class="">Start Date</span>
+                    <span class="">Begins:</span>
                     <input type="datetime-local" ng-model="event.startDate">
                 </label>
 
                 <label class="item item-input col">
-                    <span class="">End Date</span>
+                    <span class="">Ends:</span>
                     <input type="datetime-local" ng-model="event.endDate">
                 </label>
             </div><!-- end date row -->
@@ -54,12 +54,12 @@
 
         <div class="list">
             <div class="positive-bg col">
-                <span class="">Event Description</span>
+                <span class="input-label">Event Description</span>
             </div>
             <div class="row">
                 <label class="item item-input col">
 
-                    <input type="text" placeholder="Description" ng-model="event.description">
+                    <textarea placeholder="Description" ng-model="event.description"></textarea>
                 </label>
             </div>
         </div>
@@ -71,7 +71,7 @@
 
             <div class="row">
                 <label for="" class="item item-input col" >
-                    <input type="text" ng-model="event.location.building" placeholder="building">
+                    <input type="text" ng-model="event.location.building" placeholder="Building">
                 </label>
                 <label for="" class="item item-input col">
                     <input type="text" ng-model="event.location.room" placeholder="Room">
@@ -79,12 +79,12 @@
             </div>
             <div class="row">
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.location.street" placeholder="street">
+                    <input type="text" ng-model="event.location.street" placeholder="Street">
                 </label>
             </div>
             <div class="row">
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.location.city" placeholder="city">
+                    <input type="text" ng-model="event.location.city" placeholder="City">
                 </label>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@
             </div>
             <div class="row">
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.notes" placeholder="notes">
+                    <textarea ng-model="event.notes" placeholder="Notes"></textarea>
                 </label>
             </div>
             <!-- </list> -->
