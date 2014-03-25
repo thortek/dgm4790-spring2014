@@ -34,17 +34,30 @@ angular.module('starter.controllers', [])
             console.log(error); // show the error
         });
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
-  
+
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
-  
-  //Department object to reference?
-  $scope.departments = [
+
+  //Department object to reference? what is this a reference for? ie. what does shade have to do with departments? can you add it to the departments array below?
+  /*$scope.departments = [
     {name:'black', shade:'dark'},
     {name:'white', shade:'light'},
     {name:'red', shade:'dark'},
     {name:'blue', shade:'dark'},
     {name:'yellow', shade:'light'}
-  ];
+  ];*/
+
+    //temp model of departments for add-event.html
+    $scope.departments = [
+        {name:"Automotive Technology", abrv:"AT"},
+        {name:"Culinary Arts", abrv:"CA"},
+        {name:"Computer Science", abrv:"CS"},
+        {name:"Construction Technology", abrv:"CT"},
+        {name:"Digital Media", abrv:"DGM"},
+        {name:"Engineering Graphics Technicians", abrv:"EG"},
+        {name:"Engineering Technology", abrv:"ET"},
+        {name:"Information Systems & Technology", abrv:"IS&T"},
+        {name:"Technology management", abrv:"TM"}
+    ];
 
   //Add Event Function
   $scope.submitEvent = function() {
@@ -52,7 +65,7 @@ angular.module('starter.controllers', [])
     var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
     newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
-  
+
 }]);
 
 function forceOrder($scope) {
