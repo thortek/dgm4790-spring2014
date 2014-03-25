@@ -60,6 +60,13 @@ angular.module('starter.controllers', [])
         });
 }).controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
   $scope.event = {};
+  $scope.departments = [
+    {name:'black', shade:'dark'},
+    {name:'white', shade:'light'},
+    {name:'red', shade:'dark'},
+    {name:'blue', shade:'dark'},
+    {name:'yellow', shade:'light'}
+  ];
 
   $scope.submitEvent = function() {
     console.log($scope.event);
