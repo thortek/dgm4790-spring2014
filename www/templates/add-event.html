@@ -8,17 +8,17 @@
                 <span class="input-label">Choose Department</span>
             </div>
             <div>
-            <div class="row" ng-repeat="department in departments">
-                <label class="item item-radio col">
-                    <input type="radio" name="dept" value="department.abrv">
-                    <div class="item">
-                        {{ department.name }}
-                    </div>
-                    <i class="radio-icon ion-checkmark-circled"></i>
-                </label>
+                <div class="row" ng-repeat="department in departments">
+                    <label class="item item-radio col">
+                        <input type="radio" name="dept" value="department.abrv">
+                        <div class="item">
+                            {{ department.name }}
+                        </div>
+                        <i class="radio-icon ion-checkmark-circled"></i>
+                    </label>
+                </div>
             </div>
         </div>
-
         <!--Add Event Title-->
         <div class="list">
             <div class="">
@@ -64,22 +64,18 @@
                 </label>
             </div>
         </div>
-
-
-
-
-        <!-- Please change this to programmatically add date submitted, not manually
-
-        <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
-   -->
+        <!-- Please change this to programmatically add date submitted, not manually-->
         <div class="list">
             <div class="positive-bg col">
-                <span class="input-label">Event Address</span>
+                <span class="input-label">Event Address</span><i class="icon ion-location"></i> Location</span>
             </div>
 
             <div class="row">
                 <label for="" class="item item-input col" >
                     <input type="text" ng-model="event.location.building" placeholder="building">
+                </label>
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.room" placeholder="Room">
                 </label>
             </div>
             <div class="row">
@@ -94,12 +90,10 @@
             </div>
             <div class="row">
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.location.other" placeholder="other">
+                    <input type="text" ng-model="event.location.zip" placeholder="Zip">
                 </label>
             </div>
         </div>
-
-
         <div class="list">
             <div class="positive-bg col">
                 <span class="input-label">Other Information</span>
@@ -129,7 +123,7 @@
           <p>Department: {{ event.department }}</p>
           <p>Chair Name: {{ event.chairName }}</p>
           <p>Event Name: {{ event.eventName }}</p>
-          <p>Start Date: {{ event.StartDate }}</p>
+          <p>Start Date: {{ event.startDate }}</p>
           <p>End Date: {{ event.endDate }}</p>
           <p>Date Submitted: {{ event.dateSubmitted }}</p>
           <p>Location: </p>
