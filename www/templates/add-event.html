@@ -1,170 +1,127 @@
 <view title="'Add-Event'">
-  <content has-header="true" padding="true" has-tabs="true" has-footer="true">
-    <!-- <list> -->
+    <content has-header="true" padding="true" has-tabs="true" has-footer="true">
+        <!-- <list> -->
 
-<!-- <label class="item item-input"><input type="text" ng-model="event.department" placeholder="Department"></label> -->
-
-<div class="list">
-  <div class="row">
-    <label class="item item-input col">
-    <span class="input-label">Department</span> 
-    </label>
-  </div>
-  
-    <div class="row">
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="AT" ng-model="event.department">
-        <div class="item-content">
-          AT
+        <!--Choose Department-->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Choose Department</span>
+            </div>
+            <div>
+            <div class="row" ng-repeat="department in departments">
+                <label class="item item-radio col">
+                    <input type="radio" name="dept" value="department.abrv">
+                    <div class="item">
+                        {{ department.name }}
+                    </div>
+                    <i class="radio-icon ion-checkmark-circled"></i>
+                </label>
+            </div>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-      
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="CA" ng-model="event.department">
-        <div class="item-content">
-          CA
+
+        <!--Add Event Title-->
+        <div class="list">
+            <div class="">
+                <div class="positive-bg col">
+                    <span class="input-label">Event Name</span>
+                </div>
+                <div class="row">
+                    <label class="item item-input col">
+                        <input class="item-content" type="text" placeholder="Event-a-thon" ng-model="event.eventName">
+                    </label>
+                </div>
+            </div>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-      
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="CS" ng-model="event.department">
-        <div class="item-content">
-          CS
+
+        <!--Choose Event Dates-->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Event Date</span>
+            </div>
+
+            <div class="row">
+                <label class="item item-input col">
+                    <span class="">
+                        <i class="icon ion-calendar"></i> Start Date</span>
+                    <input type="datetime-local" ng-model="event.startDate">
+                </label>
+
+                <label class="item item-input col">
+                    <span class=""><i class="icon ion-calendar"></i> End Date</span>
+                    <input type="datetime-local" ng-model="event.endDate">
+                </label>
+            </div><!-- end date row -->
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-    </div>
-    <div class="row">
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="CT" ng-model="event.department">
-        <div class="item-content">
-          CT
+
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="">Event Description</span>
+            </div>
+            <div class="row">
+                <label class="item item-input col">
+
+                    <input type="text" placeholder="Description" ng-model="event.description">
+                </label>
+            </div>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-      
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="DGM" ng-model="event.department">
-        <div class="item-content">
-          DGM
+
+
+
+
+        <!-- Please change this to programmatically add date submitted, not manually
+
+        <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
+   -->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Event Address</span>
+            </div>
+
+            <div class="row">
+                <label for="" class="item item-input col" >
+                    <input type="text" ng-model="event.location.building" placeholder="building">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.street" placeholder="street">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.city" placeholder="city">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.other" placeholder="other">
+                </label>
+            </div>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-  
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="EGD" ng-model="event.department">
-        <div class="item-content">
-          EG&amp;D
+
+
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Other Information</span>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.url" placeholder="url">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.notes" placeholder="notes">
+                </label>
+            </div>
+            <!-- </list> -->
+            <div class="list">
+                <div class="row">
+                    <button class="button button-block button-balanced" ng-click="submitEvent()">Create Event</button>
+                </div>
+            </div>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-    </div>
-    <div class="row">
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="ET" ng-model="event.department">
-        <div class="item-content">
-          ET
-        </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-      
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="ISP" ng-model="event.department">
-        <div class="item-content">
-          IS&amp;T
-        </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-      
-      <label class="item item-radio col">
-        <input type="radio" name="dept" value="TM" ng-model="event.department">
-        <div class="item-content">
-          TM
-        </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-    </div><!-- row -->
-</div><!-- list -->
-
-
-<!-- Do we really need to enter the Chair Name every single time when only the Department Chairs will be submitting entries?
-
-<div class="row">
-  <label class="item item-input col">
-    <span class="input-label">Chair Name</span>
-    <input type="text" placeholder="First Last" ng-model="event.chairName">
-  </label>
-</div> -->
-
-<div class="list">
-  <div class="row">
-    <label class="item item-input col">
-      <span class="input-label">Event Name</span>
-      <input type="text" placeholder="Event-a-thon" ng-model="event.eventName">
-    </label>
-  </div>
-</div>
-
-<div class="list">
-  <div class="row">
-      <label class="item item-input col">
-        <span class="input-label"><i class="icon ion-calendar"></i> Start Date</span>
-        <input type="date" ng-model="event.startDate">
-      </label>
-  
-      <label class="item item-input col">
-        <span class="input-label"><i class="icon ion-calendar"></i> End Date</span>
-        <input type="date" ng-model="event.endDate">
-      </label>
-  </div><!-- end date row -->
-
-  <div class="row">
-    <label class="item item-input col">
-      <span class="input-label"><i class="icon ion-clock"></i> Start Time</span>
-      <input type="number" ng-model="event.startTime">
-    </label>
-
-    <label class="item item-input col">
-      <span class="input-label"><i class="icon ion-clock"></i> End Time</span>
-      <input type="number" ng-model="event.endEnd">
-    </label>
-  </div><!-- end time row -->
-</div>
-
-<div class="list">
-  <div class="row">
-    <label class="item item-input item-stacked-label col">
-      <span class="input-label">Description</span>
-      <input type="text" ng-model="event.description">
-    </label>
-  </div>
-</div>
-
-      <!-- Please change this to programmatically add date submitted, not manually
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
- -->
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.building" placeholder="building"></label>
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.street" placeholder="street"></label>
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.city" placeholder="city"></label>
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.other" placeholder="other"></label>
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.url" placeholder="url"></label>
-
-      <label for="" class="item item-input"><input type="text" ng-model="event.notes" placeholder="notes"></label>
-
-    <!-- </list> -->
-      <div class="list">
-        <div class="row">
-          <button class="button button-block button-balanced" ng-click="submitEvent()">Create Event</button>
-        </div>
-      </div>
-  </content>
+    </content>
 </view>
 
 <!--
