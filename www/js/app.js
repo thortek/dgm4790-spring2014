@@ -92,6 +92,6 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
             params.push(k + '=' + v);
         });
         return path + '/?' + params.join('&');
-    });
+    });   
 
 });

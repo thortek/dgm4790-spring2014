@@ -84,7 +84,15 @@ angular.module('starter.services', ['ngResource'])
             }
         }
     })
-    .factory('Events', function($resource) {
+    .factory('eventService', function($resource) {
         // Resource that points directly to all events
-        return $resource('http://uvutest.learningcomponents.com/api/events', {});
+        return {
+            getEvents : function() {
+                return $resource('http://uvutest.learningcomponents.com/api/events', {});
+            },
+            addEvent :  function() {
+                return $resource('http://uvutest.learningcomponents.com/api/addevent');
+            }
+
+        };
     });
