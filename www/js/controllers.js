@@ -37,15 +37,6 @@ angular.module('starter.controllers', [])
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
 
-  //Department object to reference? what is this a reference for? ie. what does shade have to do with departments? can you add it to the departments array below?
-  /*$scope.departments = [
-    {name:'black', shade:'dark'},
-    {name:'white', shade:'light'},
-    {name:'red', shade:'dark'},
-    {name:'blue', shade:'dark'},
-    {name:'yellow', shade:'light'}
-  ];*/
-
     //temp model of departments for add-event.html
     $scope.departments = [
         {name:"Automotive Technology", abrv:"AT"},
@@ -61,9 +52,17 @@ angular.module('starter.controllers', [])
 
   //Add Event Function
   $scope.submitEvent = function() {
+
+    //Add the depticon icon based on which department was given example: at-green.png
+    if ("deparment" in $scope.event)
+    {
+      console.log('department exists');
+    }
+
+
     console.log($scope.event);                //Log the details about to be sent to the server
-    var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
-    newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
+    //var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
+    //newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
 
 }]);
