@@ -53,10 +53,10 @@ angular.module('starter.controllers', [])
         {name:"Computer Science", abrv:"CS"},
         {name:"Construction Technology", abrv:"CT"},
         {name:"Digital Media", abrv:"DGM"},
-        {name:"Engineering Graphics Technicians", abrv:"EG"},
+        {name:"Engineering Graphics & Design", abrv:"EG&D"},
         {name:"Engineering Technology", abrv:"ET"},
         {name:"Information Systems & Technology", abrv:"IS&T"},
-        {name:"Technology management", abrv:"TM"}
+        {name:"Technology Management", abrv:"TM"}
     ];
 
   //Add Event Function
