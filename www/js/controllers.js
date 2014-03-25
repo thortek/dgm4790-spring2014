@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
   console.log('Regster fired');
 })
 
-.controller('deanCtrl', function($scope, Events, tempDataService, $stateParams) {
+.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
   //Store our promise in a variable so we can do something when it resolves.
  // var promiseData = tempDataService.GetData();
         $scope.myClass = "grey"
@@ -23,7 +23,9 @@ angular.module('starter.controllers', [])
  //   $scope.tempData = tempData; //Scope variable of temp data.
  // });
 
-        Events.get(function(response) {
+        var events = eventService.getEvents();
+
+        events.get(function(response) {
 
             $scope.events = response.rows;
             // console.log(response.rows);
@@ -43,8 +45,10 @@ angular.module('starter.controllers', [])
         }, function(error) {
             console.log(error);
         });
-}).controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
+}).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
+  
   $scope.event = {};
+  
   $scope.departments = [
     {name:'black', shade:'dark'},
     {name:'white', shade:'light'},
@@ -55,7 +59,7 @@ angular.module('starter.controllers', [])
 
   $scope.submitEvent = function() {
     console.log($scope.event);
-    var newEvent = $resource('http://uvutest.learningcomponents.com/api/addevent');
+    var newEvent = eventService.addEvent();
     newEvent.save([], $scope.event);
 
   };
