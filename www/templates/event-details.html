@@ -5,13 +5,48 @@
   navigation history that also transitions its views in and out.
 -->
 <view title="'Hello Mr Dean'">
-  <content has-header="true">
+  <content has-header="true" has-footer="true">
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img ng-src="../img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
+        <h2>{{ theEvent.eventName }}</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          {{theEvent.description}}
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+
+    </div>
     
     <br />
 
-    		<p>ID:{{ theEvent.id }}</p>
-          <p>Department: {{ theEvent.department }}</p>
-          <p>Chair Name: {{ theEvent.chairName }}</p>
+    		<p></p>
+          <p></p>
+          <p>Chair Name: </p>
           <p>Event Name: {{ theEvent.eventName }}</p>
           <p>Start Date: {{ theEvent.startDate }}</p>
           <p>End Date: {{ theEvent.endDate }}</p>
