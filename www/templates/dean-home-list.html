@@ -31,7 +31,7 @@
       </div><!-- search bar -->
 
       <a class="item item-avatar" ng-repeat="event in events | orderBy:event | filter:search" href="#/dean/events/{{event.value.eventName}}">
-        <img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
+        <img ng-src="img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          <h2>{{ event.value.eventName }}</h2>
          <p>{{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
       </a>
