@@ -89,7 +89,7 @@
 </div><!-- list -->
 
 
-<!-- Do we really need to enter the Chair Name every single time when only the Department Chairs will be submitting entries?
+<!-- Do we really need to enter the Chair Name every single time when only the Department Chairs will be submitting entries? - Nate
 
 <div class="row">
   <label class="item item-input col">
@@ -142,28 +142,66 @@
   </div>
 </div>
 
-      <!-- Please change this to programmatically add date submitted, not manually
+      <!-- Please change this to programmatically add date submitted, not manually. - Nate
 
       <label for="" class="item item-input"><input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted"></label>
  -->
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.building" placeholder="building"></label>
+<div class="list">
+  <div class="row">
+    <label class="item item-input col">
+    <span class="input-label"><i class="icon ion-location"></i> Location</span>
+    </label>
+  </div>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.street" placeholder="street"></label>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.city" placeholder="city"></label>
+  <div class="row">
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.building" placeholder="Building"></label>
+    
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.room" placeholder="Room"></label>
+  </div>
+  
+  <div class="row">
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.street" placeholder="Street"></label>
+  </div>
+  
+  <div class="row">
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.city" placeholder="City"></label>
+    
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.zip" placeholder="Zip"></label>
+  </div>
+  </div>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.location.other" placeholder="other"></label>
+<div class="list">
+  
+  <!-- I can't imagine why we would have a field for other? - Nate
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.url" placeholder="url"></label>
+  <div class="row">
+    <label for="" class="item item-input col"><input type="text" ng-model="event.location.other" placeholder="other"></label>
+  </div> -->
+  
+  <div class="row">
+    <label for="" class="item item-input col"><input type="text" ng-model="event.url" placeholder="url"></label>
+  </div>
+</div>
 
-      <label for="" class="item item-input"><input type="text" ng-model="event.notes" placeholder="notes"></label>
+<!-- Is it just me, or is Notes virtually the same as Description? - Nate -->
 
-    <!-- </list> -->
+<div class="list">
+  <div class="row">
+    <label class="item item-input item-stacked-label col">
+      <span class="input-label">Notes</span>
+      <input type="text" ng-model="event.notes">
+    </label>
+  </div>
+</div>
+
       <div class="list">
         <div class="row">
           <button class="button button-block button-balanced" ng-click="submitEvent()">Create Event</button>
         </div>
       </div>
+
+    <!-- </list> -->
   </content>
 </view>
 
@@ -172,7 +210,7 @@
           <p>Department: {{ event.department }}</p>
           <p>Chair Name: {{ event.chairName }}</p>
           <p>Event Name: {{ event.eventName }}</p>
-          <p>Start Date: {{ event.StartDate }}</p>
+          <p>Start Date: {{ event.startDate }}</p>
           <p>End Date: {{ event.endDate }}</p>
           <p>Date Submitted: {{ event.dateSubmitted }}</p>
           <p>Location: </p>
