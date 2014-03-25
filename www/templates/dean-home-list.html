@@ -14,28 +14,28 @@
 
     <div class="list" ng-controller="forceOrder">
 
-    <div class="button-bar">
-      <a class="button button-positive" ng-click="event = 'value.department';">Department</a>
-      <a class="button button-positive" ng-click="event = 'value.startDate';">Date</a>
-      <a class="button button-positive" ng-click="event = 'value.eventName';">Event Name</a>
-    </div>
-      
-<div class="bar bar-header item-input-inset">
-  <label class="item-input-wrapper">
-    <i class="icon ion-ios7-search placeholder-icon"></i>
-    <input type="search" placeholder="Search" ng-model="search">
-  </label>
-  <button class="button button-clear">
-    Cancel
-  </button>
-</div>
+      <div class="button-bar">
+        <a class="button button-positive" ng-click="event = 'value.startDate';">Date</a>
+        <a class="button button-positive" ng-click="event = 'value.department';">Department</a>
+        <a class="button button-positive" ng-click="event = 'value.eventName';">Event Name</a>
+      </div><!-- filter buttons -->
+          
+      <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios7-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="search">
+        </label>
+        <button class="button button-clear" ng-click="resetSearch()">
+          Cancel
+        </button>
+      </div><!-- search bar -->
 
       <a class="item item-avatar" ng-repeat="event in events | orderBy:event | filter:search" href="#/dean/events/{{event.value.eventName}}">
-
         <img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
          <h2>{{ event.value.eventName }}</h2>
          <p>{{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
       </a>
-    </div>
+
+    </div><!-- ng-controller forceOrder -->
   </content>
 </view>
