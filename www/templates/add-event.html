@@ -1,22 +1,118 @@
-<view title="'Hello Mr Dean'">
-  <content has-header="true" has-tabs="true">
-    <list>
-      <input type="text" ng-model="event.department" placeholder="Deparment">
-      <input type="text" ng-model="event.chairName" placeholder="chairName">
-      <input type="text" ng-model="event.eventName" placeholder="eventName">
-      <input type="text" ng-model="event.StartDate" placeholder="StartDate">
-      <input type="text" ng-model="event.endDate" placeholder="endDate">
-      <input type="text" ng-model="event.dateSubmitted" placeholder="dateSubmitted">
-      <input type="text" ng-model="event.location.building" placeholder="building">
-      <input type="text" ng-model="event.location.street" placeholder="street">
-      <input type="text" ng-model="event.location.city" placeholder="city">
-      <input type="text" ng-model="event.location.other" placeholder="other">
-      <input type="text" ng-model="event.url" placeholder="url">
-      <input type="text" ng-model="vent.description" placeholder="description">
-      <input type="text" ng-model="event.notes" placeholder="notes">
-    </list>
-      <button ng-click="submitEvent()">Add Event</button>
-  </content>
+<view title="'Add-Event'">
+    <content has-header="true" has-tabs="true" has-footer="true">
+        <!-- <list> -->
+
+        <!--Choose Department-->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Choose Department</span>
+            </div>
+            <div>
+                <div class="row" ng-repeat="department in departments">
+                    <label class="item item-radio col">
+                        <input type="radio" name="dept" value="department.abrv">
+                        <div class="item">
+                            <h4>{{ department.name }}</h4>
+                        </div>
+                        <i class="radio-icon ion-checkmark-circled"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!--Add Event Title-->
+        <div class="list">
+            <div class="">
+                <div class="positive-bg col">
+                    <span class="input-label">Event Name</span>
+                </div>
+                <div class="row">
+                    <label class="item item-input col">
+                        <input class="item-content" type="text" placeholder="Event-a-thon" ng-model="event.eventName">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!--Choose Event Dates-->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label"><i class="icon ion-calendar"></i> Event Date</span>
+            </div>
+
+            <div class="row">
+                <label class="item item-input col">
+                    <span class="">Begins:</span>
+                    <input type="datetime-local" ng-model="event.startDate">
+                </label>
+
+                <label class="item item-input col">
+                    <span class="">Ends:</span>
+                    <input type="datetime-local" ng-model="event.endDate">
+                </label>
+            </div><!-- end date row -->
+        </div>
+
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Event Description</span>
+            </div>
+            <div class="row">
+                <label class="item item-input col">
+
+                    <textarea placeholder="Description" ng-model="event.description"></textarea>
+                </label>
+            </div>
+        </div>
+        <!-- Please change this to programmatically add date submitted, not manually-->
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label"><i class="icon ion-location"></i> Location</span>
+            </div>
+
+            <div class="row">
+                <label for="" class="item item-input col" >
+                    <input type="text" ng-model="event.location.building" placeholder="Building">
+                </label>
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.room" placeholder="Room">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.street" placeholder="Street">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col col-75">
+                    <input type="text" ng-model="event.location.city" placeholder="City">
+                </label>
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.location.zip" placeholder="Zip">
+                </label>
+            </div>
+        </div>
+        <div class="list">
+            <div class="positive-bg col">
+                <span class="input-label">Other Information</span>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <input type="text" ng-model="event.url" placeholder="url">
+                </label>
+            </div>
+            <div class="row">
+                <label for="" class="item item-input col">
+                    <textarea ng-model="event.notes" placeholder="Notes"></textarea>
+                </label>
+            </div>
+            <!-- </list> -->
+            <div class="list">
+                <div class="row">
+                    <button class="button button-block button-balanced" ng-click="submitEvent()">Create Event</button>
+                </div>
+            </div>
+        </div>
+    </content>
 </view>
 
 <!--
@@ -24,7 +120,7 @@
           <p>Department: {{ event.department }}</p>
           <p>Chair Name: {{ event.chairName }}</p>
           <p>Event Name: {{ event.eventName }}</p>
-          <p>Start Date: {{ event.StartDate }}</p>
+          <p>Start Date: {{ event.startDate }}</p>
           <p>End Date: {{ event.endDate }}</p>
           <p>Date Submitted: {{ event.dateSubmitted }}</p>
           <p>Location: </p>

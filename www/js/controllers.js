@@ -14,61 +14,61 @@ angular.module('starter.controllers', [])
   console.log('Regster fired');
 })
 
+.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
+        $scope.myClass = "grey"; //not sure what this is doing...
 
-// A simple controller that fetches a list of data from a service
-.controller('PetIndexCtrl', function($scope, PetService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.pets = PetService.all();
-})
+        var events = eventService.getEvents(); //Create events from eventService service
 
+        events.get(function(response) { //call the get method of our $resource returned from eventService.getEvents();
 
-// A simple controller that shows a tapped item's data
-.controller('PetDetailCtrl', function($scope, $stateParams, PetService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.pet = PetService.get($stateParams.petId);
-})
+            $scope.events = response.rows; //Add all the events to the scope.
 
-
-.controller('deanCtrl', function($scope, Events, tempDataService, $stateParams) {
-  //Store our promise in a variable so we can do something when it resolves.
- // var promiseData = tempDataService.GetData();
-        $scope.myClass = "grey"
-  //When it resolves, take the data it resolves with (tempData) and place it in the scpope.
- // promiseData.then(function(tempData) {
- //   $scope.tempData = tempData; //Scope variable of temp data.
- // });
-
-        Events.get(function(response) {
-
-            $scope.events = response.rows;
-            // console.log(response.rows);
-
-            // console.log(response);
-            for (var i=0; i<response.rows.length; i++) {
+            for (var i=0; i<response.rows.length; i++) { //loop through and find the cliicked on event (event-details view)
                 var doc = response.rows[i].value;
-                //$scope.tempData.push(doc);
-                // console.log(doc);
 
                 if (doc.eventName === $stateParams.eventName) {
-                   console.log($stateParams, 'we have a match');
-                   console.log(doc);
                    $scope.theEvent =  doc;
                 }
             }
         }, function(error) {
-            console.log(error);
+            console.log(error); // show the error
         });
-}).controller('addEventCtrl', ['$scope', '$resource', function($scope, $resource){
-  $scope.event = {};
+}).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
+  $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
+
+  //Department object to reference? what is this a reference for? ie. what does shade have to do with departments? can you add it to the departments array below?
+  /*$scope.departments = [
+    {name:'black', shade:'dark'},
+    {name:'white', shade:'light'},
+    {name:'red', shade:'dark'},
+    {name:'blue', shade:'dark'},
+    {name:'yellow', shade:'light'}
+  ];*/
+
+    //temp model of departments for add-event.html
+    $scope.departments = [
+        {name:"Automotive Technology", abrv:"AT"},
+        {name:"Computer Science", abrv:"CS"},
+        {name:"Construction Technology", abrv:"CT"},
+        {name:"Culinary Arts", abrv:"CA"},
+        {name:"Digital Media", abrv:"DGM"},
+        {name:"Engineering Graphics & Design", abrv:"EG&D"},
+        {name:"Engineering Technology", abrv:"ET"},
+        {name:"Information Systems & Technology", abrv:"IS&T"},
+        {name:"Technology Management", abrv:"TM"}
+    ];
+
+  //Add Event Function
   $scope.submitEvent = function() {
-    console.log($scope.event);
-    var newEvent = $resource('http://uvutest.learningcomponents.com/api/addevent');
-    newEvent.save([], $scope.event);
-
+    console.log($scope.event);                //Log the details about to be sent to the server
+    var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
+    newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
+
 }]);
 
 function forceOrder($scope) {
       $scope.event = 'value.startDate';
+      $scope.resetSearch = function(){$scope.search = "";} //clear search bar
 }

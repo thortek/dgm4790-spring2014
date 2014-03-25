@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
       url:'/dean',
       abstract: true,
       templateUrl:'templates/dean-home.html',
-      controller:'deanCtrl',
+      controller:'deanCtrl'
     })
     .state('dean.events', {
       url:"/events",
@@ -92,6 +92,6 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
             params.push(k + '=' + v);
         });
         return path + '/?' + params.join('&');
-    });
+    });   
 
 });
