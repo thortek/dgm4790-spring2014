@@ -49,9 +49,9 @@ angular.module('starter.controllers', [])
     //temp model of departments for add-event.html
     $scope.departments = [
         {name:"Automotive Technology", abrv:"AT"},
-        {name:"Culinary Arts", abrv:"CA"},
         {name:"Computer Science", abrv:"CS"},
         {name:"Construction Technology", abrv:"CT"},
+        {name:"Culinary Arts", abrv:"CA"},
         {name:"Digital Media", abrv:"DGM"},
         {name:"Engineering Graphics & Design", abrv:"EG&D"},
         {name:"Engineering Technology", abrv:"ET"},
