@@ -1,9 +1,26 @@
-
+<!--just to look at pull conflict-->
 <!-- 
   Create tabs with an icon and label, using the tabs-positive style. 
   Each tab's child <nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
+
+<!-- <view title="'Hello Mr Dean'">
+  <content has-header="true">
+      Search: <input ng-model="search">
+
+    <div class="list" ng-controller="forceOrder">
+    <a href="" ng-click="event = 'value.department';">Department</a> |
+    <a href="" ng-click="event = 'value.startDate';">Date</a> |
+    <a href="" ng-click="event = 'value.eventName';">Event Name</a>
+      <a class="item item-avatar" ng-repeat="event in events | orderBy:event | filter:search" href="#/event-details/{{event.value.eventName}}">
+      	<img ng-src="../img/icons/{{ event.value.depticon }}" alt="{{ event.value.department }}" />
+         <h2>{{ event.value.eventName }}</h2>
+         <p>{{event.value.startDate}} - {{event.value.endDate}} | Time: {{event.value.startTime}} - {{event.value.endTime}}</p>
+      </a>
+    </div>
+  </content>
+</view> -->
 
 <tabs tabs-style="tabs-icon-top" tabs-type="tabs-dark">
 
@@ -12,7 +29,7 @@
   </tab>
 
 
-  <tab title="Thors Cats" icon="icon ion-ionic" href="#/dean/about">
+  <tab title="About" icon="icon ion-ionic" href="#/dean/about">
     <nav-view name="tab2">
       temp tab2
     </nav-view>

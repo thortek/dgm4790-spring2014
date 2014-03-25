@@ -10,15 +10,25 @@
     <div class="list card">
 
       <div class="item item-avatar">
-        <img ng-src="../img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
+        <img ng-src="img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
         <h2>{{ theEvent.eventName }}</h2>
-        <p>November 05, 1955</p>
+        <p>{{ theEvent.startDate }} - {{ theEvent.endDate }}</p>
       </div>
 
       <div class="item item-body">
-        <p>
-          {{theEvent.description}}
-        </p>
+      	<h3>Description</h3>
+        <p>{{ theEvent.description }}</p>
+        <p>Submitted by:  {{ theEvent.chairName }} on {{ theEvent.dateSubmitted }}.</p>
+        <h3>Location</h3>
+        <address>
+        	Building: {{ theEvent.location.building }}<br>
+        	Street: {{ theEvent.location.street }}<br>
+        	City: {{ theEvent.location.city }}
+        </address>
+        <h3>More Information</h3>
+        <p>Other: {{ theEvent.location.other }}</p>
+        <p>Notes: {{ theEvent.notes }}</p>
+        <p>URL: {{ theEvent.url }}</p>
         <p>
           <a href="#" class="subdued">1 Like</a>
           <a href="#" class="subdued">5 Comments</a>
@@ -42,26 +52,6 @@
 
     </div>
     
-    <br />
-
-    		<p></p>
-          <p></p>
-          <p>Chair Name: </p>
-          <p>Event Name: {{ theEvent.eventName }}</p>
-          <p>Start Date: {{ theEvent.startDate }}</p>
-          <p>End Date: {{ theEvent.endDate }}</p>
-          <p>Date Submitted: {{ theEvent.dateSubmitted }}</p>
-          <p>Location</p>
-          <p>Building: {{ theEvent.location.building }}</p>
-          <p>Street: {{ theEvent.location.street }}</p>
-          <p>City: {{ theEvent.location.city }}</p>
-          <p>Other: {{ theEvent.location.other }}</p>
-          <p>URL: {{ theEvent.url }}</p>
-          <p>Description: {{ theEvent.description }}</p>
-          <p>Notes: {{ theEvent.notes }}</p>
-
-
-
   </content>
 </view>
 

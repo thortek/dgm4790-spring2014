@@ -40,14 +40,14 @@ angular.module('starter.controllers', [])
     //temp model of departments for add-event.html
     $scope.departments = [
         {name:"Automotive Technology", abrv:"AT"},
-        {name:"Culinary Arts", abrv:"CA"},
         {name:"Computer Science", abrv:"CS"},
         {name:"Construction Technology", abrv:"CT"},
+        {name:"Culinary Arts", abrv:"CA"},
         {name:"Digital Media", abrv:"DGM"},
-        {name:"Engineering Graphics Technicians", abrv:"EG"},
+        {name:"Engineering Graphics & Design", abrv:"EG&D"},
         {name:"Engineering Technology", abrv:"ET"},
         {name:"Information Systems & Technology", abrv:"IS&T"},
-        {name:"Technology management", abrv:"TM"}
+        {name:"Technology Management", abrv:"TM"}
     ];
 
   //Add Event Function
@@ -69,4 +69,5 @@ angular.module('starter.controllers', [])
 
 function forceOrder($scope) {
       $scope.event = 'value.startDate';
+      $scope.resetSearch = function(){$scope.search = "";} //clear search bar
 }
