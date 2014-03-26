@@ -68,7 +68,7 @@ angular.module('starter.controllers', [])
 
 }]);
 
-function forceOrder($scope) {
-      $scope.event = 'value.startDate';
+function forceOrder($scope, eventStartDateService) {
+      $scope.event = eventStartDateService.startDateEvent;
       $scope.resetSearch = function(){$scope.search = "";} //clear search bar
 }
