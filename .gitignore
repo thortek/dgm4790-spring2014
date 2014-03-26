@@ -1,6 +1,7 @@
-# OS generated files #
-######################
+*.keystore
+*.idea/*
 .DS_Store
-.DS_Store?
-
-.idea/
+*.sw*
+platforms/^.*
+myApp/
+.cordova/
