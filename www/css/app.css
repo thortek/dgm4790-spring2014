@@ -25,3 +25,34 @@
 
 /*temp styling*/
 .positive-bg span{color:#fff;}
+
+
+/*Add event Department buttons*/
+.depBtn{display: inline-block;margin: 5% 10% 0% 10%;}
+input[type="radio"]{display:none;}
+.at input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/atSprite.png") left top no-repeat;}
+.at input[type="radio"]:checked + label span {background: url("../img/icons/atSprite.png") -92px top no-repeat;}
+
+.dgm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/dgmSprite.png") left top no-repeat;}
+.dgm input[type="radio"]:checked + label span {background: url("../img/icons/dgmSprite.png") -92px top no-repeat;}
+
+.ca input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/caSprite.png") left top no-repeat;}
+.ca input[type="radio"]:checked + label span {background: url("../img/icons/caSprite.png") -92px top no-repeat;}
+
+.ct input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/ctSprite.png") left top no-repeat;}
+.ct input[type="radio"]:checked + label span {background: url("../img/icons/ctSprite.png") -92px top no-repeat;}
+
+.ist input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/istSprite.png") left top no-repeat;}
+.ist input[type="radio"]:checked + label span {background: url("../img/icons/istSprite.png") -92px top no-repeat;}
+
+.egd input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/egdSprite.png") left top no-repeat;}
+.egd input[type="radio"]:checked + label span {background: url("../img/icons/egdSprite.png") -92px top no-repeat;}
+
+.cs input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/csSprite.png") left top no-repeat;}
+.cs input[type="radio"]:checked + label span {background: url("../img/icons/csSprite.png") -92px top no-repeat;}
+
+.tm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/tmSprite.png") left top no-repeat;}
+.tm input[type="radio"]:checked + label span {background: url("../img/icons/tmSprite.png") -92px top no-repeat;}
+
+.et input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/etSprite.png") left top no-repeat;}
+.et input[type="radio"]:checked + label span {background: url("../img/icons/etSprite.png") -92px top no-repeat;}
