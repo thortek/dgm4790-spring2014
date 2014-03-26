@@ -54,9 +54,38 @@ angular.module('starter.controllers', [])
   $scope.submitEvent = function() {
 
     //Add the depticon icon based on which department was given example: at-green.png
-    if ("deparment" in $scope.event)
+    if ("department" in $scope.event)
     {
-      console.log('department exists');
+      switch ($scope.event.department) 
+      {
+        case "Automotive Technology":
+          $scope.event.depticon = 'at-green.png';
+          break;
+        case "Computer Science":
+          $scope.event.depticon = 'cs-green.png';
+          break;
+        case "Construction Technology":
+          $scope.event.depticon = 'ct-green.png';
+          break;
+        case "Culinary Arts":
+          $scope.event.depticon = 'ca-green.png';
+          break;
+        case "Digital Media":
+          $scope.event.depticon = 'dm-green.png';
+          break;
+        case "Engineering Graphics & Design":
+          $scope.event.depticon = 'egd-green.png';
+          break;
+        case "Engineering Technology":
+          $scope.event.depticon = 'et-green.png';
+          break;
+        case "Information Systems & Technology":
+          $scope.event.depticon = 'ist-green.png';
+          break;
+        case "Technology Management":
+          $scope.event.depticon = 'tm-green.png';
+          break;
+      }
     }
 
 

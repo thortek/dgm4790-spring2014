@@ -10,7 +10,7 @@
             <div>
                 <div class="row" ng-repeat="department in departments">
                     <label class="item item-radio col">
-                        <input type="radio" name="dept" value="{{department.abrv}}" ng-model="event.department">
+                        <input type="radio" name="dept" value="{{department.name}}" ng-model="event.department">
                         <div class="item">
                             <h4>{{ department.name }}</h4>
                         </div>
