@@ -7,18 +7,20 @@
             <div class="positive-bg col">
                 <span class="input-label">Choose Department</span>
             </div>
-            <div>
-                <div class="row" ng-repeat="department in departments">
-                    <label class="item item-radio col">
-                        <input type="radio" name="dept" value="department.abrv">
-                        <div class="item">
-                            <h4>{{ department.name }}</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="depBtn" ng-repeat="department in departments">
+                        <div class="{{ department.picabrv }}">
+                            <input id="{{ department.abrv }}" type="radio" name="dept" value="department.abrv">
+                            <label for="{{ department.abrv }}"><span></span></label>
                         </div>
-                        <i class="radio-icon ion-checkmark-circled"></i>
-                    </label>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
         <!--Add Event Title-->
         <div class="list">
             <div class="">

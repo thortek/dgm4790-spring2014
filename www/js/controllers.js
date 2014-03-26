@@ -48,15 +48,15 @@ angular.module('starter.controllers', [])
 
     //temp model of departments for add-event.html
     $scope.departments = [
-        {name:"Automotive Technology", abrv:"AT"},
-        {name:"Computer Science", abrv:"CS"},
-        {name:"Construction Technology", abrv:"CT"},
-        {name:"Culinary Arts", abrv:"CA"},
-        {name:"Digital Media", abrv:"DGM"},
-        {name:"Engineering Graphics & Design", abrv:"EG&D"},
-        {name:"Engineering Technology", abrv:"ET"},
-        {name:"Information Systems & Technology", abrv:"IS&T"},
-        {name:"Technology Management", abrv:"TM"}
+        {name:"Automotive Technology", abrv:"AT", pic:"atSprite.png", picabrv:"at"},
+        {name:"Computer Science", abrv:"CS", pic:"csSprite.png", picabrv:"cs"},
+        {name:"Construction Technology", abrv:"CT", pic:"ctSprite.png", picabrv:"ct"},
+        {name:"Culinary Arts", abrv:"CA", pic:"caSprite.png", picabrv:"ca"},
+        {name:"Digital Media", abrv:"DGM", pic:"dgmSprite.png", picabrv:"dgm"},
+        {name:"Engineering Graphics & Design", abrv:"EG&D", pic:"egdSprite.png", picabrv:"egd"},
+        {name:"Engineering Technology", abrv:"ET", pic:"etSprite.png", picabrv:"et"},
+        {name:"Information Systems & Technology", abrv:"IS&T", pic:"istSprite.png", picabrv:"ist"},
+        {name:"Technology Management", abrv:"TM", pic:"tmSprite.png", picabrv:"tm"}
     ];
 
   //Add Event Function
