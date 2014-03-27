@@ -84,7 +84,7 @@ angular.module('starter.services', ['ngResource'])
             }
         }
     })
-    .factory('eventStartDateService', function($http,$q,eventService){
+    .factory('eventStartDateService', function(eventService){
         return{
             startDateEvent:'value.startDate'
         };
