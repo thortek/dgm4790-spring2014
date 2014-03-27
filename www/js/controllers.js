@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
-    $scope.myClass = "grey"; //not sure what this is doing...
+
 
     var events = eventService.getEvents(); //Create events from eventService service
 
@@ -110,9 +110,9 @@ angular.module('starter.controllers', [])
     newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
 
-}]);
+}])
 
-function forceOrder($scope, eventStartDateService) {
+.controller('forceOrder', function ($scope, eventStartDateService) {
       $scope.event = eventStartDateService.startDateEvent;
       $scope.resetSearch = function(){$scope.search = "";} //clear search bar
-}
+});
