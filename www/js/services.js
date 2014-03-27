@@ -98,9 +98,9 @@ angular.module('starter.services', ['ngResource'])
             addEvent :  function() {
                 return $resource('http://uvutest.learningcomponents.com/api/addevent');
             },
-            deleteEvent : function(eventID) {
-                console.log(eventID);
-                return $resource('http://uvutest.learningcomponents.com/api/events/:id', {id: eventID});
+            deleteEvent : function(eventID, revID) {
+                console.log(eventID + revID);
+                return $resource('http://uvutest.learningcomponents.com/api/event/:id?rev=:rev', {id:eventID, rev:revID});
             }
 
         };
