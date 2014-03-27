@@ -36,13 +36,18 @@ angular.module('starter.controllers', [])
     });
 
     $scope.deleteEvent = function(deleteEvent) {
-      var something = deleteEvent;
-      console.log(something);
-
-      //var removeEvent = eventService.deleteEvent(eventId);
+      var id =  deleteEvent._id;
+      var rev =  deleteEvent._rev;
 
 
-      //removeEvent.delete()
+      console.log(id);
+      console.log(rev);
+
+
+      var removeEvent = eventService.deleteEvent(id, rev);
+
+
+      removeEvent.delete()
     };
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
