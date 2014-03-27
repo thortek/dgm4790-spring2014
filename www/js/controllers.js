@@ -15,39 +15,50 @@ angular.module('starter.controllers', [])
 })
 
 .controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
-        $scope.myClass = "grey"; //not sure what this is doing...
+    $scope.myClass = "grey"; //not sure what this is doing...
 
-        var events = eventService.getEvents(); //Create events from eventService service
+    var events = eventService.getEvents(); //Create events from eventService service
 
-        events.get(function(response) { //call the get method of our $resource returned from eventService.getEvents();
+    events.get(function(response) { //call the get method of our $resource returned from eventService.getEvents();
 
-            $scope.events = response.rows; //Add all the events to the scope.
+        $scope.events = response.rows; //Add all the events to the scope.
 
-            for (var i=0; i<response.rows.length; i++) { //loop through and find the cliicked on event (event-details view)
-                var doc = response.rows[i].value;
+        for (var i=0; i<response.rows.length; i++) { //loop through and find the cliicked on event (event-details view)
+            var doc = response.rows[i].value;
 
-                if (doc.eventName === $stateParams.eventName) {
-                   $scope.theEvent =  doc;
-                }
+            if (doc.eventName === $stateParams.eventName) {
+               $scope.theEvent =  doc;
+               console.log(doc);
             }
-        }, function(error) {
-            console.log(error); // show the error
-        });
+        }
+    }, function(error) {
+        console.log(error); // show the error
+    });
+
+    $scope.deleteEvent = function(deleteEvent) {
+      var something = deleteEvent;
+      console.log(something);
+
+      //var removeEvent = eventService.deleteEvent(eventId);
+
+
+      //removeEvent.delete()
+    };
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
 
     //temp model of departments for add-event.html
     $scope.departments = [
-        {name:"Automotive Technology", abrv:"AT"},
-        {name:"Computer Science", abrv:"CS"},
-        {name:"Construction Technology", abrv:"CT"},
-        {name:"Culinary Arts", abrv:"CA"},
-        {name:"Digital Media", abrv:"DGM"},
-        {name:"Engineering Graphics & Design", abrv:"EG&D"},
-        {name:"Engineering Technology", abrv:"ET"},
-        {name:"Information Systems & Technology", abrv:"IS&T"},
-        {name:"Technology Management", abrv:"TM"}
+        {name:"Automotive Technology", abrv:"AT", pic:"atSprite.png", picabrv:"at"},
+        {name:"Computer Science", abrv:"CS", pic:"csSprite.png", picabrv:"cs"},
+        {name:"Construction Technology", abrv:"CT", pic:"ctSprite.png", picabrv:"ct"},
+        {name:"Culinary Arts", abrv:"CA", pic:"caSprite.png", picabrv:"ca"},
+        {name:"Digital Media", abrv:"DGM", pic:"dgmSprite.png", picabrv:"dgm"},
+        {name:"Engineering Graphics & Design", abrv:"EG&D", pic:"egdSprite.png", picabrv:"egd"},
+        {name:"Engineering Technology", abrv:"ET", pic:"etSprite.png", picabrv:"et"},
+        {name:"Information Systems & Technology", abrv:"IS&T", pic:"istSprite.png", picabrv:"ist"},
+        {name:"Technology Management", abrv:"TM", pic:"tmSprite.png", picabrv:"tm"}
     ];
 
   //Add Event Function
@@ -90,13 +101,13 @@ angular.module('starter.controllers', [])
 
 
     console.log($scope.event);                //Log the details about to be sent to the server
-    //var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
-    //newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
+    var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
+    newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
 
 }]);
 
-function forceOrder($scope) {
-      $scope.event = 'value.startDate';
+function forceOrder($scope, eventStartDateService) {
+      $scope.event = eventStartDateService.startDateEvent;
       $scope.resetSearch = function(){$scope.search = "";} //clear search bar
 }
