@@ -97,6 +97,10 @@ angular.module('starter.services', ['ngResource'])
             },
             addEvent :  function() {
                 return $resource('http://uvutest.learningcomponents.com/api/addevent');
+            },
+            deleteEvent : function(eventID) {
+                console.log(eventID);
+                return $resource('http://uvutest.learningcomponents.com/api/events/:id', {id: eventID});
             }
 
         };

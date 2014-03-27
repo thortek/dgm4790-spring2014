@@ -15,36 +15,38 @@ angular.module('starter.controllers', [])
 })
 
 .controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
-        $scope.myClass = "grey"; //not sure what this is doing...
+    $scope.myClass = "grey"; //not sure what this is doing...
 
-        var events = eventService.getEvents(); //Create events from eventService service
+    var events = eventService.getEvents(); //Create events from eventService service
 
-        events.get(function(response) { //call the get method of our $resource returned from eventService.getEvents();
+    events.get(function(response) { //call the get method of our $resource returned from eventService.getEvents();
 
-            $scope.events = response.rows; //Add all the events to the scope.
+        $scope.events = response.rows; //Add all the events to the scope.
 
-            for (var i=0; i<response.rows.length; i++) { //loop through and find the cliicked on event (event-details view)
-                var doc = response.rows[i].value;
+        for (var i=0; i<response.rows.length; i++) { //loop through and find the cliicked on event (event-details view)
+            var doc = response.rows[i].value;
 
-                if (doc.eventName === $stateParams.eventName) {
-                   $scope.theEvent =  doc;
-                }
+            if (doc.eventName === $stateParams.eventName) {
+               $scope.theEvent =  doc;
+               console.log(doc);
             }
-        }, function(error) {
-            console.log(error); // show the error
-        });
+        }
+    }, function(error) {
+        console.log(error); // show the error
+    });
+
+    $scope.deleteEvent = function(deleteEvent) {
+      var something = deleteEvent;
+      console.log(something);
+
+      //var removeEvent = eventService.deleteEvent(eventId);
+
+
+      //removeEvent.delete()
+    };
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
-
-  //Department object to reference? what is this a reference for? ie. what does shade have to do with departments? can you add it to the departments array below?
-  /*$scope.departments = [
-    {name:'black', shade:'dark'},
-    {name:'white', shade:'light'},
-    {name:'red', shade:'dark'},
-    {name:'blue', shade:'dark'},
-    {name:'yellow', shade:'light'}
-  ];*/
 
     //temp model of departments for add-event.html
     $scope.departments = [
@@ -61,6 +63,43 @@ angular.module('starter.controllers', [])
 
   //Add Event Function
   $scope.submitEvent = function() {
+
+    //Add the depticon icon based on which department was given example: at-green.png
+    if ("department" in $scope.event)
+    {
+      switch ($scope.event.department) 
+      {
+        case "Automotive Technology":
+          $scope.event.depticon = 'at-green.png';
+          break;
+        case "Computer Science":
+          $scope.event.depticon = 'cs-green.png';
+          break;
+        case "Construction Technology":
+          $scope.event.depticon = 'ct-green.png';
+          break;
+        case "Culinary Arts":
+          $scope.event.depticon = 'ca-green.png';
+          break;
+        case "Digital Media":
+          $scope.event.depticon = 'dm-green.png';
+          break;
+        case "Engineering Graphics & Design":
+          $scope.event.depticon = 'egd-green.png';
+          break;
+        case "Engineering Technology":
+          $scope.event.depticon = 'et-green.png';
+          break;
+        case "Information Systems & Technology":
+          $scope.event.depticon = 'ist-green.png';
+          break;
+        case "Technology Management":
+          $scope.event.depticon = 'tm-green.png';
+          break;
+      }
+    }
+
+
     console.log($scope.event);                //Log the details about to be sent to the server
     var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
     newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server

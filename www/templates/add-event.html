@@ -11,15 +11,13 @@
                 <div class="col">
                     <div class="depBtn" ng-repeat="department in departments">
                         <div class="{{ department.picabrv }}">
-                            <input id="{{ department.abrv }}" type="radio" name="dept" value="department.abrv">
+                            <input id="{{ department.abrv }}" type="radio" name="dept" value="{{department.name}}" ng-model="event.department">
                             <label for="{{ department.abrv }}"><span></span></label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
         <!--Add Event Title-->
         <div class="list">
