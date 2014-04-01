@@ -58,3 +58,17 @@ input[type="radio"]{display:none;}
 .et input[type="radio"]:checked + label span {background: url("../img/icons/etSprite.png") -92px top no-repeat;}
 
 h2 {line-height: 1.3em;}
+
+/*--Menu Icons Styles--*/
+
+.button .icon {
+	vertical-align: initial;
+}
+.list .button-bar .button-positive .icon:before {
+	display: block;
+	line-height: 25px;
+	padding: 4px 0px 0px 0px;
+}
+.list .button-bar a {
+	line-height: 25px;
+}
