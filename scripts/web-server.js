@@ -41,7 +41,7 @@ function HttpServer(handlers) {
 HttpServer.prototype.start = function(port) {
   this.port = port;
   this.server.listen(port);
-  util.puts('Http Server running at http://localhost:' + port + '/');
+  util.puts('Http Server running at http://local.dev:' + port + '/');
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {
