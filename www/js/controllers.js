@@ -87,7 +87,7 @@ angular.module('starter.controllers', [])
           $scope.event.depticon = 'ca-green.png';
           break;
         case "Digital Media":
-          $scope.event.depticon = 'dm-green.png';
+          $scope.event.depticon = 'dgm-green.png';
           break;
         case "Engineering Graphics & Design":
           $scope.event.depticon = 'egd-green.png';
