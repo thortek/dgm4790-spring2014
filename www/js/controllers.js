@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
 
 
               removeEvent.delete()
-              $state.go('^');
+              $state.go('dean.events', [''], {reload:true});
 
               return true;
 
