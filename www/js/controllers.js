@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
             $timeout(function() {
             $state.go('dean.events', [''], {reload:true});
             $scope.$broadcast('scroll.refreshComplete');
-            }, 1500);
+            }, 1000);
 }
 
     var events = eventService.getEvents(); //Create events from eventService service
