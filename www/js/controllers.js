@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
   console.log('Regster fired');
 })
 
-.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams) {
+.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams, $ionicActionSheet, $state) {
 
 
     var events = eventService.getEvents(); //Create events from eventService service
@@ -36,18 +36,35 @@ angular.module('starter.controllers', [])
     });
 
     $scope.deleteEvent = function(deleteEvent) {
-      var id =  deleteEvent._id;
-      var rev =  deleteEvent._rev;
+
+         // Show the action sheet
+         $ionicActionSheet.show({
+           destructiveText: 'Delete',
+           titleText: 'Are you sure you want to delete this event?',
+           cancelText: 'Cancel',
+           buttonClicked: function(index) {
+             console.log(index);
+             return true;
+           },
+           destructiveButtonClicked: function() {
+              var id =  deleteEvent._id;
+              var rev =  deleteEvent._rev;
 
 
-      console.log(id);
-      console.log(rev);
+              console.log(id);
+              console.log(rev);
 
 
-      var removeEvent = eventService.deleteEvent(id, rev);
+              var removeEvent = eventService.deleteEvent(id, rev);
 
 
-      removeEvent.delete()
+              removeEvent.delete()
+              $state.go('^');
+
+              return true;
+
+           }
+         });
     };
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
