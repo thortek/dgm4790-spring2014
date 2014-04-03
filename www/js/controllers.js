@@ -127,6 +127,33 @@ angular.module('starter.controllers', [])
     newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
   };
 
+  var deptClicked = false;
+  var selectedDept = -1;
+
+  //Hide other department icons after selecting one
+  $scope.hideUnselected = function(current) {
+    deptClicked = true;
+    selectedDept = current;
+    $scope.showCancel = true;
+  }
+
+  //Add classes to selected and unselected department icons after selecting one
+  $scope.getClass = function(current) {
+    if(deptClicked) {
+      if(current == selectedDept){
+        return "selectedDept";
+      }else{
+        return "unselectedDept";
+      }
+    }
+  }
+
+  //Remove classes and show all icons again
+  $scope.deptReset = function() {
+    deptClicked = false;
+    $scope.showCancel = false;
+  }
+
 }])
 
 .controller('forceOrder', function ($scope, eventStartDateService) {
