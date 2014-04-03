@@ -14,8 +14,14 @@ angular.module('starter.controllers', [])
   console.log('Regster fired');
 })
 
-.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams, $ionicActionSheet, $state) {
+.controller('deanCtrl', function($scope, $timeout, eventService, tempDataService, $stateParams, $ionicActionSheet, $state) {
+ $scope.onRefresh = function() {
 
+            $timeout(function() {
+            $state.go('dean.events', [''], {reload:true});
+            $scope.$broadcast('scroll.refreshComplete');
+            }, 1500);
+}
 
     var events = eventService.getEvents(); //Create events from eventService service
 

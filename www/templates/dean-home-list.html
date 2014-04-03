@@ -5,8 +5,8 @@
   navigation history that also transitions its views in and out.
 -->
 <view title="'Hello Mr Dean'">
-  <content has-header="true" has-footer="true">
-      
+  <content has-header="true" has-footer="true" on-refresh="onRefresh()">
+      <refresher></refresher>
 <!-- <label class="item item-input">
   <i class="icon ion-search placeholder-icon"></i>
   <input type="text" placeholder="Search" ng-model="search">
