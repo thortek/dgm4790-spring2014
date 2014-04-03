@@ -7,13 +7,14 @@
             <div class="positive-bg col">
                 <span class="input-label"><i class=" icon ion-grid"></i> Choose Department</span>
             </div>
-            <div class="row">
+            <div class="row deptRow">
                 <div class="col">
-                    <div class="depBtn" ng-repeat="department in departments">
+                    <div class="depBtn" ng-repeat="department in departments" ng-class="getClass($index)">
                         <div class="{{ department.picabrv }}">
-                            <input id="{{ department.abrv }}" type="radio" name="dept" value="{{department.name}}" ng-model="event.department">
+                            <input id="{{ department.abrv }}" type="radio" name="dept" value="{{department.name}}" ng-model="event.department" ng-click="hideUnselected($index)">
                             <label for="{{ department.abrv }}"><span></span></label>
                         </div>
+                        <div ng-click="deptReset()" ng-show="showCancel" class="cancel icon ion-close-circled"></div>
                     </div>
                 </div>
             </div>
